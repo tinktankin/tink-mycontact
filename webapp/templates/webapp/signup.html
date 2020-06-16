@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<form method="post">
+		{% csrf_token %}
+		Email: <input type="email" name="email">
+		<input type="submit">
+	</form> 
+</body>
