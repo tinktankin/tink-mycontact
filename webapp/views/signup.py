@@ -1,7 +1,6 @@
 from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from webapp.models import User, Verification
 from secrets import token_urlsafe
 from django.contrib.sites.shortcuts import get_current_site

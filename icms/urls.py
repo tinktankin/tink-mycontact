@@ -20,4 +20,5 @@ from webapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup', SignUp.as_view()),
+    path('verify', Verify.as_view()),
 ]
