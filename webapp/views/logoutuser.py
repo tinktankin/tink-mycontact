@@ -6,7 +6,6 @@ class LogoutUser(View):
 	"""
 	Url: logout
 	Logs out the current user.
-	GET:  
 	"""
 	def get(self, request):
 		logout(request)

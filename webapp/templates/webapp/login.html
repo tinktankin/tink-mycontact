@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Sign Up</title>
+	<title>Login</title>
 </head>
 
 <body>
@@ -9,6 +9,7 @@
 		Email: <input type="email" name="email">
 		Password: <input type="password" name="password">
 		<input type="submit" value="Login">
-	</form> 
+	</form>
+	<a href="{% url 'social:begin' 'google-oauth2' %}">Login Using Google</a> 
 	New User? <a href="signup"><button>Register</button></a>
 </body>

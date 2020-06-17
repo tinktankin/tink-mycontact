@@ -9,5 +9,6 @@ class Dashboard(View):
 	def get(self, request):
 		if not request.user.is_authenticated:
 			return redirect('login')
+		print(request.user.id, request.user.email)
 		return HttpResponse("Logged In")
 		

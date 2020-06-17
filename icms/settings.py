@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'webapp.apps.WebappConfig',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -133,3 +137,14 @@ EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'icms.conscript@gmail.com'
 EMAIL_HOST_PASSWORD = 'admin@icms'
 
+# Authentication Backends for User Management
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# Google Login Credentials
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '320927325405-h2t8atgva5njlep8lm0ugad53qiibn40.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '24-xM6XXDXgDbSVP2G_j8j1W'
+
+LOGIN_REDIRECT_URL = '/dashboard'
