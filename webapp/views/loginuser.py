@@ -18,7 +18,6 @@ class LoginUser(View):
 		password = request.POST.get('password')
 		user = authenticate(username=email, password=password)
 		if user is not None:
-			print(user)
 			login(request, user)
 			return redirect('dashboard')
 		else:
