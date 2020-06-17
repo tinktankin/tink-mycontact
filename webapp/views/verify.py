@@ -29,7 +29,6 @@ class Verify(View):
 		password2 = request.POST.get('password2')
 		try:
 			obj = Verification.objects.get(pk=email, token=token, is_verified=False)
-			print(obj)
 		except Exception as e:
 			print(e)
 			return HttpResponse("Invalid Token")
