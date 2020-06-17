@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<form method="post">
+		{% csrf_token %}
+		Email: <input type="email" name="email">
+		Password: <input type="password" name="password">
+		<input type="submit" value="Login">
+	</form> 
+	New User? <a href="signup"><button>Register</button></a>
+</body>
