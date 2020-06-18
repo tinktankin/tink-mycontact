@@ -17,9 +17,6 @@ class LoginUser(View):
 		email = request.POST.get('email')
 		password = request.POST.get('password')
 		user = authenticate(username=email, password=password)
-		r="^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
-		if (re.search(r,email)==None):
-			return HttpResponse('<script language="JavaScript">alert("Invaild mail id");window.location="http://127.0.0.1:8000/signup"</script>')
 		if user is not None:
 			login(request, user)
 			return redirect('dashboard')
