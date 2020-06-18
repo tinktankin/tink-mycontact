@@ -140,8 +140,38 @@ EMAIL_HOST_PASSWORD = 'admin@icms'
 # Authentication Backends for User Management
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+#Facebook Credentials
+SOCIAL_AUTH_FACEBOOK_KEY = '1344644599059486'         # App ID This should be changed.
+SOCIAL_AUTH_FACEBOOK_SECRET = '3e58c419cade2d8abd9bfcc168c13258'      # App Secret This should be changed.
+#SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       
+  'fields': 'id, name, email, picture.type(large), link'
+}
+
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
+
+#Linkedin Credentials
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '78rh432w4wogtz'         #Client ID. This should be changed.
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = '9zyRdV1SVhjFJPMv'  #Client Secret. This should be changed
+#SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_basicprofile', 'r_emailaddress']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['email-address', 'formatted-name', 'public-profile-url', 'picture-url']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [
+    ('id', 'id'),
+    ('formattedName', 'name'),
+    ('emailAddress', 'email_address'),
+    ('pictureUrl', 'picture_url'),
+    ('publicProfileUrl', 'profile_url'),
+]
 
 # Google Login Credentials
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '320927325405-h2t8atgva5njlep8lm0ugad53qiibn40.apps.googleusercontent.com'

@@ -3,13 +3,34 @@
 	<title>Login</title>
 </head>
 
+<script language="JavaScript">
+function Validate(){
+if(document.frm1.email.value=="")
+{
+alert("Invaild mail id");
+window.location="http://127.0.0.1:8000/login";
+return false;
+}
+else
+{
+    return true;
+}
+
+}
+</script>
+  
 <body>
-	<form method="post">
+	<form method="post" name="frm1"  >
 		{% csrf_token %}
-		Email: <input type="email" name="email">
+		Email: <input type="email" name="email" >
 		Password: <input type="password" name="password">
-		<input type="submit" value="Login">
+		<input type="submit" value="Login" onClick="return Validate()">
+		<br><br>
+	<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">Login Using Google</a><br> 
+	<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a><br>
+	<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">Login with Linkedin</a> 
+	<br><br>
 	</form>
-	<a href="{% url 'social:begin' 'google-oauth2' %}">Login Using Google</a> 
 	New User? <a href="signup"><button>Register</button></a>
+	
 </body>
