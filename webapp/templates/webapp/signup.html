@@ -2,11 +2,25 @@
 <head>
 	<title>Sign Up</title>
 </head>
+<script language="JavaScript">
+function Validate(){
+if(document.frm2.email.value=="")
+{
+    alert("Invaild mail id");
+    window.location="http://127.0.0.1:8000/signup";
+    return false;
+}
+else
+{
+    return true;
+}
 
+}
+</script>
 <body>
-	<form method="post">
+	<form method="post" name="frm2">
 		{% csrf_token %}
 		Email: <input type="email" name="email">
-		<input type="submit">
+		<input type="submit" onClick="return Validate()">
 	</form> 
 </body>
