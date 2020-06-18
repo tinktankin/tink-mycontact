@@ -36,5 +36,4 @@ class SignUp(View):
 			return HttpResponse("Vertification Link Sent! Please Check Your Email!")
 		except Exception as e:
 			print(e)
-			return HttpResponse("Something Went Wrong!")
-			
+			return HttpResponse("Something Went Wrong!")	
