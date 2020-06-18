@@ -26,5 +26,4 @@ urlpatterns = [
     path('logout', LogoutUser.as_view()),
     path('dashboard', Dashboard.as_view(), name='dashboard'),
     url('', include('social_django.urls', namespace='social')),
-    #path('social-auth/', include('social_django.urls', namespace='social')),
 ]

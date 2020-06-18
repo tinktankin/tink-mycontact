@@ -144,6 +144,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
+
 #Facebook Credentials
 SOCIAL_AUTH_FACEBOOK_KEY = '1344644599059486'         # App ID This should be changed.
 SOCIAL_AUTH_FACEBOOK_SECRET = '3e58c419cade2d8abd9bfcc168c13258'      # App Secret This should be changed.
@@ -151,6 +152,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '3e58c419cade2d8abd9bfcc168c13258'      # App Secr
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       
   'fields': 'id, name, email, picture.type(large), link'
 }
+
 SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 
     ('name', 'name'),
     ('email', 'email'),

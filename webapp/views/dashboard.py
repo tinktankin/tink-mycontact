@@ -11,4 +11,3 @@ class Dashboard(View):
 			return redirect('login')
 		print(request.user.id, request.user.email)
 		return HttpResponse("Logged In")
-		
