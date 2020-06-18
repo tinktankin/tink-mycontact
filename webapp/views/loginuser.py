@@ -25,7 +25,3 @@ class LoginUser(View):
 			return redirect('dashboard')
 		else:
 			return HttpResponse("Not Authorized")
-
-
-
-			
