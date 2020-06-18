@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Login</title>
+</head>
+
+<body>
+	<form method="post">
+		{% csrf_token %}
+		Email: <input type="email" name="email">
+		Password: <input type="password" name="password">
+		<input type="submit" value="Login">
+	</form>
+	<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">Login Using Google</a><br> 
+	<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a><br>
+	<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">linkedin</a> <br>
+	New User? <a href="signup"><button>Register</button></a>
+</body>
