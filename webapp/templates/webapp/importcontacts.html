@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Import Contacts</title>
+</head>
+
+<body>
+	<h1>Import Contacts</h1>
+	<h2>Import from File</h2>
+	<form method="post" action="/import-from-file" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type=file name=file accept=".csv">
+		<input type=submit value=Import>
+	</form>
+	<!-- Import from Google, LinkedIn Functionality Here -->
+</body>

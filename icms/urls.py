@@ -24,6 +24,8 @@ urlpatterns = [
     path('verify', Verify.as_view()),
     path('login', LoginUser.as_view(), name='login'),
     path('logout', LogoutUser.as_view()),
-    path('dashboard', Dashboard.as_view(), name='dashboard'),
     url('', include('social_django.urls', namespace='social')),
+    path('dashboard', Dashboard.as_view(), name='dashboard'),
+    path('import-contacts', ImportContacts.as_view(), name='import-contacts'),
+    path('import-from-file', ImportFromFile.as_view()),
 ]
