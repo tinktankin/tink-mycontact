@@ -8,8 +8,7 @@ from django.core.mail import send_mail
 import random as r
 
 otp=""
-for i in range(6):
-    otp+=str(r.randint(1,9))
+otp+=str(r.randint(100000,999999))
 
 
 class ForgotPassword(View):
