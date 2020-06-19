@@ -4,3 +4,5 @@ from .loginuser import LoginUser
 from .logoutuser import LogoutUser
 from .dashboard import Dashboard
 from .importcontacts import ImportContacts, ImportFromFile
+from .forgotpass import ForgotPassword
+from .resetpass import ResetPassword
