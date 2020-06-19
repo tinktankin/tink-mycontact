@@ -27,5 +27,7 @@ urlpatterns = [
     url('', include('social_django.urls', namespace='social')),
     path('dashboard', Dashboard.as_view(), name='dashboard'),
     path('import-contacts', ImportContacts.as_view(), name='import-contacts'),
+    path('forgotpass', ForgotPassword.as_view(), name='forgotpass'),
+    path('resetpass', ResetPassword.as_view(), name='resetpass'),
     path('import-from-file', ImportFromFile.as_view()),
 ]
