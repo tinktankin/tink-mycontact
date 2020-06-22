@@ -7,25 +7,28 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import send_mail
 import random as r
 
-otp=""
-for i in range(6):
-    otp+=str(r.randint(1,9))
+otp = ""
 
 
 class ForgotPassword(View):
     def get(self, request):
         return render(request, 'webapp/forgotpass.html')
-    
-    def post(self, request):
 
+    def post(self, request):
+        global otp
+        otp = ""
+        otp += str(r.randint(100000, 999999))
         email = request.POST.get('email')
         if User.objects.filter(email=email).exists():
             token = token_urlsafe(20)
             domain = get_current_site(request).domain
-            user_url = 'http://{}/verify?email={}&token={}'.format(domain, email, token)
-            message = 'Enter '+otp+' and your new password to reset password'.format(user_url)
+            user_url = 'http://{}/verify?email={}&token={}'.format(
+                domain, email, token)
+            message = 'Enter '+otp + \
+                ' and your new password to reset password'.format(user_url)
             try:
-                send_mail('OTP for reset password', message, 'Team ICMS', [email], fail_silently=False, html_message=None)
+                send_mail('OTP for reset password', message, 'Team ICMS', [
+                          email], fail_silently=False, html_message=None)
                 obj = Verification(email=email, token=token)
                 obj.save()
                 return redirect('resetpass')
