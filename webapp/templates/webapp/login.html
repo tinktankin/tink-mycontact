@@ -5,7 +5,7 @@ Login
 {% endblock title %}
 
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/login.css' %}">
 {% endblock style %}
 
 {% block script %}
@@ -79,7 +79,7 @@ Login
 
 <!-- Previous HTML -->
 
-<!-- 
+<!--
 <html>
 <head>
 	<title>Login</title>
@@ -100,7 +100,7 @@ else
 
 }
 </script>
-  
+
 <body>
 	<form method="post" name="frm1"  >
 		{% csrf_token %}
@@ -108,14 +108,14 @@ else
 		Password: <input type="password" name="password">
 		<input type="submit" value="Login" onClick="return Validate()">
 		<br><br>
-	<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">Login Using Google</a><br> 
+	<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">Login Using Google</a><br>
 	<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a><br>
-		<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">Login with Linkedin</a> 
+		<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">Login with Linkedin</a>
 	<br><br>
 	</form>
 	New User? <a href="signup"><button>Register</button></a>
 	<br><a href="forgotpass"><button>Forgot Password</button></a>
 
-	
-</body> 
+
+</body>
 -->
