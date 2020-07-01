@@ -121,6 +121,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "webapp/static")
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     '/webapp/static',
+# ]
 
 # Authentication Model for Users
 AUTH_USER_MODEL = 'webapp.User'

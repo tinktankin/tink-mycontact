@@ -1,4 +1,33 @@
-<html>
+{% extends 'webapp/webapp_base.html' %}
+{% load static %}
+{% block title %}
+Set Password
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/verify.css' %}">
+{% endblock style %}
+
+{% block body %}
+<div id="verify-box">
+	<div class="verify-form">
+		<h1>Set password</h1>
+		<form method="post">
+			{% csrf_token %}
+			<input type="text" name="fname" placeholder="First Name">
+			<input type="text" name="lname" placeholder="Last Name">
+			<input type="password" name="password1" placeholder="New Password">
+			<input type="password" name="password2" placeholder="Repeat Password">
+			<input type="submit">
+		</form>
+	</div>
+</div>
+{% endblock body %}
+
+<!-- Previous HTML -->
+
+<!-- <html>
+
 <head>
 	<title>Set Password</title>
 </head>
@@ -13,4 +42,4 @@
 		Repeat Password <input type="password" name="password2"><br>
 		<input type="submit">
 	</form>
-</body>
+</body> -->
