@@ -30,4 +30,6 @@ urlpatterns = [
     path('forgotpass', ForgotPassword.as_view(), name='forgotpass'),
     path('resetpass', ResetPassword.as_view(), name='resetpass'),
     path('import-from-file', ImportFromFile.as_view()),
+    path('addcontact', AddContacts.as_view()),
+    path('viewcontact',ViewContact.as_view()),
 ]

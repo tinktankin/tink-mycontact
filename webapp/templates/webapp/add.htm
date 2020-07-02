@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>
+        add contacts
+    </title>
+</head>
+<body>
+    <form method="post" action="/addcontact">
+    {% csrf_token %}<br>
+        <label for="contact_type">contact_type</label><br>
+        <input type="text" id="contact_type" name="contact_type"><br>
+        <label for="full_name">full_name</label><br>
+        <input type="text" id="full_name" name="full_name"><br>
+        <label for="first_name">first_name</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="middle_name">middle_name</label><br>
+        <input type="text" id="middle_name" name="middle_name"><br>
+        <label for="last_name">last_name</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
