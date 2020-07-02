@@ -1,5 +1,36 @@
+<centre><h4>VIEW CONTACTS</centre></h4>
 {% for Contact in cont_instance %}
-    {{ Contact }}
-    <br>
-    <br>
+	*{{Contact.full_name}}
+	{{Contact.first_name}}
+	{{Contact.middle_name}}
+	{{Contact.last_name}}
+	{{Contact.company}}
+	{{Contact.designation}}
+	{{Contact.email}}
+	{{Contact.phone}}
+	{{Contact.location}}
+	{{Contact.gender}}
+	{{Contact.title}}
+	{{Contact.dept}}
+	{{Contact.university}}
+	{{Contact.degree}}
+	{{Contact.passing_year}}
+	{{Contact.college}}
+	{{Contact.linkedin_url}}
+	{{Contact.facebook_url}}
+	{{Contact.skype_id}}
+	{{Contact.industry}}
+	{{Contact.country}}
+	{{Contact.state}}
+	{{Contact.zip_code}}
+	{{Contact.key_skills}}
+	{{Contact.total_exp}}
+	{{Contact.years_in_business}}
+	{{Contact.cin_no}}
+	{{Contact.turnover}}
+	{{Contact.incorporation_date}}
+	{{Contact.employees}}
+	{{Contact.ctc}}
+
+<br><br><hr>
 {% endfor %}
