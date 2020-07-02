@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from webapp.views import *
+from webapp.views import (SignUp, Verify, LoginUser,
+                          LogoutUser, Dashboard, ImportContacts,
+                          ForgotPassword, ResetPassword, ImportFromFile)
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +35,10 @@ urlpatterns = [
     path('forgotpass', ForgotPassword.as_view(), name='forgotpass'),
     path('resetpass', ResetPassword.as_view(), name='resetpass'),
     path('import-from-file', ImportFromFile.as_view()),
+<<<<<<< HEAD
     path('addcontact', AddContacts.as_view()),
     path('viewcontact',ViewContact.as_view()),
 ]
+=======
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+>>>>>>> upstream/master
