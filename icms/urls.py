@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from webapp.views import (SignUp, Verify, LoginUser,
-                          LogoutUser, Dashboard, ImportContacts,
-                          ForgotPassword, ResetPassword, ImportFromFile)
+from webapp.views import (SignUp, Verify, LoginUser, LogoutUser, Dashboard,
+                          ImportContacts, ForgotPassword, ResetPassword,
+                          ImportFromFile)
 
 from django.conf import settings
 from django.conf.urls.static import static

@@ -11,7 +11,7 @@ body {
 #login-box {
     position: relative;
     margin: 5% auto;
-    height: 400px;
+    height: 350px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     width: 600px;
@@ -24,18 +24,44 @@ body {
     box-sizing: border-box;
     padding: 40px;
     width: 300px;
-    height: 400px;
+    height: 350px;
+}
+
+form {
+    margin-bottom: 8px;
+}
+
+.signup-button {
+    padding: 0;
+    text-align: center;
+}
+
+button.btn-primary {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    background-color: rgb(24, 153, 52);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+button.btn-primary:hover {
+    background-color: rgb(24, 130, 52);
+    transition: 0.3s;
 }
 
 .left-bottom {
-    text-align: center;
-    position: absolute;
-    /* top: 250px;
-    left: 0;
-    width: 100%;
-    height: 37.5%; */
-    background-color: #b2d3e6;
-    /* font-size: 20px */
+    font-size: 0.8em;
+    margin-top: 100px;
+    /* width: 100%; */
+    margin: 0;
+    /* position: absolute; */
+    top: 60%;
+    /* bottom: 30px; */
+    /* left: 0; */
 }
 
 h1 {
@@ -77,11 +103,11 @@ input[type='submit'] {
     cursor: pointer;
 }
 
-a[href='signup'] {
+.left-bottom a[href='signup'] {
     margin-bottom: 28px;
     width: 120px;
     height: 32px;
-    background-color: #8dbdd8;
+    /* background-color: #8dbdd8; */
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -105,7 +131,7 @@ input[type='submit']:focus {
     box-sizing: border-box;
     padding: 40px;
     width: 300px;
-    height: 400px;
+    height: 350px;
     background-color: #b2d3e6;
     background-size: cover;
 }
