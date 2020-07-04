@@ -1,10 +1,49 @@
-/* Testing for link */
-/* Not linking */
-
-.bg-light {
-    background-color: red;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-    font-size: 40px;
+.navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-size: larger;
+    letter-spacing: 1px;
+}
+
+.bg-light {
+    background-color: #b2d3e6 !important;
+}
+
+#footer {
+    background-color: #b2d3e6;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+#footer .container {
+    max-width: 600px;
+}
+
+#footer a {
+    color: rgba(0, 0, 0, .5);
+}
+
+#footer a:hover {
+    color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+}
+
+#footer .footer-copyright a {
+    color: rgba(0, 0, 0, 0.6);
 }
