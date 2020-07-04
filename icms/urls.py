@@ -35,4 +35,10 @@ urlpatterns = [
     path('forgotpass', ForgotPassword.as_view(), name='forgotpass'),
     path('resetpass', ResetPassword.as_view(), name='resetpass'),
     path('import-from-file', ImportFromFile.as_view()),
+<<<<<<< HEAD
+    path('addcontact', AddContacts.as_view()),
+    path('viewcontact',ViewContact.as_view()),
+]
+=======
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+>>>>>>> upstream/master

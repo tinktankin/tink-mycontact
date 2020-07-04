@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>
+        add contacts
+    </title>
+</head>
+<body>
+    <form method="post" action="/addcontact">
+    {% csrf_token %}<br>
+        <label for="contact_type">contact_type</label><br>
+        <input type="text" id="contact_type" name="contact_type"><br>
+
+        <label for="full_name">full_name</label><br>
+        <input type="text" id="full_name" name="full_name"><br>
+
+        <label for="first_name">first_name</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+
+        <label for="middle_name">middle_name</label><br>
+        <input type="text" id="middle_name" name="middle_name"><br>
+
+        <label for="last_name">last_name</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+
+	<label for="company">company</label><br>
+        <input type="text" id="company" name="company"><br>
+
+        <label for="designation">designation</label><br>
+        <input type="text" id="designation" name="designation"><br>
+
+        <label for="email">email</label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="phone">phone</label><br>
+        <input type="text" id="phone" name="phone"><br>
+
+        <label for="location">location</label><br>
+        <input type="text" id="location" name="location"><br>
+
+	<label for="gender">gender</label><br>
+        <input type="text" id="gender" name="gender"><br>
+
+        <label for="title">title</label><br>
+        <input type="text" id="title" name="title"><br>
+
+        <label for="dept">dept</label><br>
+        <input type="text" id="dept" name="dept"><br>
+
+        <label for="university">university</label><br>
+        <input type="text" id="university" name="university"><br>
+
+        <label for="degree">degree</label><br>
+        <input type="text" id="degree" name="degree"><br>
+
+	<label for="passing_year">passing_year</label><br>
+        <input type="text" id="passing_year" name="passing_year"><br>
+
+        <label for="college">college</label><br>
+        <input type="text" id="college" name="college"><br>
+
+        <label for="linked_url">linked_url</label><br>
+        <input type="text" id="linked_url" name="linked_url"><br>
+
+        <label for="facebook_url">facebook_url</label><br>
+        <input type="text" id="facebook_url" name="facebook_url"><br>
+
+        <label for="skype_id">skype_id</label><br>
+        <input type="text" id="skype_id" name="skype_id"><br>
+
+	<label for="industry">industry</label><br>
+        <input type="text" id="industry" name="industry"><br>
+
+        <label for="country">country</label><br>
+        <input type="text" id="country" name="country"><br>
+
+        <label for="state">state</label><br>
+        <input type="text" id="state" name="state"><br>
+
+        <label for="zip_code">zip_code</label><br>
+        <input type="text" id="zip_code" name="zip_code"><br>
+
+        <label for="key_skills">key_skills</label><br>
+        <input type="text" id="key_skills" name="key_skills"><br>
+
+	<label for="total_exp">total_exp</label><br>
+        <input type="text" id="total_exp" name="total_exp"><br>
+
+        <label for="years_in_business">years_in_business</label><br>
+        <input type="text" id="years_in_business" name="years_in_business"><br>
+
+        <label for="cin_no">cin_no</label><br>
+        <input type="text" id="cin_no" name="cin_no"><br>
+
+        <label for="turnover">turnover</label><br>
+        <input type="text" id="turnover" name="turnover"><br>
+
+        <label for="incorporation_date">incorporation_date</label><br>
+        <input type="text" id="incorporation_date" name="incorporation_date"><br>
+
+	<label for="employees">employees</label><br>
+        <input type="text" id="employees" name="employees"><br>
+
+        <label for="ctc">ctc</label><br>
+        <input type="text" id="ctc" name="ctc"><br>
+
+        
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
