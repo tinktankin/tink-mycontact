@@ -1,10 +1,13 @@
 from django.views import View
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
 from webapp.models import Contact
 
-class AddContacts(request):
-    if request.method == 'POST':
+class AddContacts(View):
+    def get(self, request):
+        return render(request, 'add.htm')
+    
+    def post(self, request):
         contact_type = request.POST.get('contact_type')
         full_name = request.POST.get('full_name')
         first_name = request.POST.get('first_name')
@@ -41,6 +44,6 @@ class AddContacts(request):
         
         cont_instance = Contact(contact_type=contact_type, full_name=full_name, first_name=first_name, middle_name=middle_name, last_name=last_name, company=company, designation=designation, email=email, phone=phone, location=location, gender=gender, title=title, dept=dept, university=university, degree=degree, passing_year=passing_year, college=college, linkedin_url=linkedin_url, facebook_url=facebook_url, skype_id=skype_id, industry=industry, country=country, state=state, zip_code=zip_code, key_skills=key_skills, total_exp=total_exp, years_in_business=years_in_business, cin_no=cin_no, turnover=turnover, incorporation_date=incorporation_date, employees=employees, ctc=ctc)
         cont_instance.save()
-    return render(request, 'add.htm')
+        return(render(request, 'add.htm'))
 
     
