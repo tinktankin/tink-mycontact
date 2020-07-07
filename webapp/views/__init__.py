@@ -1,3 +1,5 @@
+from .addcontact import AddContacts
+from .viewcontact import ViewContact
 from .signup import SignUp
 from .verify import Verify
 from .loginuser import LoginUser
