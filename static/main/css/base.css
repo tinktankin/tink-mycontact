@@ -1,4 +1,9 @@
-* {
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -41,6 +46,7 @@ a.nav-link:hover {
 }
 
 #footer {
+    display: block;
     background: rgba(0, 0, 0, 0.5) !important;
     font-size: 14px;
     color: #fff;
@@ -53,6 +59,7 @@ a.nav-link:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     font-weight: 600;
+    /* margin-top: 30px; */
 }
 
 #footer .container {
