@@ -2,6 +2,7 @@ from django.db import models
 from .user import User
 
 class Contact(models.Model):
+	score_matrix=models.CharField(max_length=30, default=None, null=True, blank=True)
 	contact_type = models.CharField(max_length=30, default=None, null=True, blank=True)
 	full_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	first_name = models.CharField(max_length=30, default=None, null=True, blank=True)

@@ -4,107 +4,140 @@
         add contacts
     </title>
 </head>
+<script language="JavaScript">
+        
+function validate()
+{
+        var model;
+        if(document.getElementById('basic').checked)
+        {
+                model="basic";
+        }
+        else if(document.getElementById('biz').checked)
+        {
+                model="biz";
+        }
+        else if(document.getElementById('hr').checked)
+        {
+                model="hr";
+        }
+        else
+        {
+                alert("Select Scoring matrix first");
+                return;
+        }
+}       
+ 
+</script>
 <body>
-    <form method="post" action="/addcontact">
+    <!--<form method="post" action="/addcontact">-->
+    <form method="post">
     {% csrf_token %}<br>
-        <label for="contact_type">contact_type</label><br>
+        <label for="score_matrix">Select Scoring Matrix: </label>
+        <input type="radio" name="radiobtn" value="Basic" id="basic"> Basic
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="radiobtn" value="Biz" id="biz"> Biz
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="radiobtn" value="HR" id="hr"> HR
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        <label for="contact_type">Contact Type</label><br>
         <input type="text" id="contact_type" name="contact_type"><br>
 
-        <label for="full_name">full_name</label><br>
+        <label for="full_name">Full Name</label><br>
         <input type="text" id="full_name" name="full_name"><br>
 
-        <label for="first_name">first_name</label><br>
+        <label for="first_name">First Name</label><br>
         <input type="text" id="first_name" name="first_name"><br>
 
-        <label for="middle_name">middle_name</label><br>
+        <label for="middle_name">Middle Name</label><br>
         <input type="text" id="middle_name" name="middle_name"><br>
 
-        <label for="last_name">last_name</label><br>
+        <label for="last_name">Last Name</label><br>
         <input type="text" id="last_name" name="last_name"><br>
 
-	<label for="company">company</label><br>
+	<label for="company">Company</label><br>
         <input type="text" id="company" name="company"><br>
 
-        <label for="designation">designation</label><br>
+        <label for="designation">Designation</label><br>
         <input type="text" id="designation" name="designation"><br>
 
-        <label for="email">email</label><br>
+        <label for="email">E-mail</label><br>
         <input type="text" id="email" name="email"><br>
 
-        <label for="phone">phone</label><br>
+        <label for="phone">Phone</label><br>
         <input type="text" id="phone" name="phone"><br>
 
-        <label for="location">location</label><br>
+        <label for="location">Location</label><br>
         <input type="text" id="location" name="location"><br>
 
-	<label for="gender">gender</label><br>
+	<label for="gender">Gender</label><br>
         <input type="text" id="gender" name="gender"><br>
 
-        <label for="title">title</label><br>
+        <label for="title">Title</label><br>
         <input type="text" id="title" name="title"><br>
 
-        <label for="dept">dept</label><br>
+        <label for="dept">Department</label><br>
         <input type="text" id="dept" name="dept"><br>
 
-        <label for="university">university</label><br>
+        <label for="university">University</label><br>
         <input type="text" id="university" name="university"><br>
 
-        <label for="degree">degree</label><br>
+        <label for="degree">Degree</label><br>
         <input type="text" id="degree" name="degree"><br>
 
-	<label for="passing_year">passing_year</label><br>
+	<label for="passing_year">Passing Year</label><br>
         <input type="text" id="passing_year" name="passing_year"><br>
 
-        <label for="college">college</label><br>
+        <label for="college">College</label><br>
         <input type="text" id="college" name="college"><br>
 
-        <label for="linked_url">linked_url</label><br>
+        <label for="linked_url">Linkedin URL</label><br>
         <input type="text" id="linked_url" name="linked_url"><br>
 
-        <label for="facebook_url">facebook_url</label><br>
+        <label for="facebook_url">Facebook URL</label><br>
         <input type="text" id="facebook_url" name="facebook_url"><br>
 
-        <label for="skype_id">skype_id</label><br>
+        <label for="skype_id">Skype ID</label><br>
         <input type="text" id="skype_id" name="skype_id"><br>
 
-	<label for="industry">industry</label><br>
+	<label for="industry">Industry</label><br>
         <input type="text" id="industry" name="industry"><br>
 
-        <label for="country">country</label><br>
+        <label for="country">Country</label><br>
         <input type="text" id="country" name="country"><br>
 
-        <label for="state">state</label><br>
+        <label for="state">State</label><br>
         <input type="text" id="state" name="state"><br>
 
-        <label for="zip_code">zip_code</label><br>
+        <label for="zip_code">Zip Code</label><br>
         <input type="text" id="zip_code" name="zip_code"><br>
 
-        <label for="key_skills">key_skills</label><br>
+        <label for="key_skills">Key Skills</label><br>
         <input type="text" id="key_skills" name="key_skills"><br>
 
-	<label for="total_exp">total_exp</label><br>
+	<label for="total_exp">Total Experience</label><br>
         <input type="text" id="total_exp" name="total_exp"><br>
 
-        <label for="years_in_business">years_in_business</label><br>
+        <label for="years_in_business">Years in business</label><br>
         <input type="text" id="years_in_business" name="years_in_business"><br>
 
-        <label for="cin_no">cin_no</label><br>
+        <label for="cin_no">cin no</label><br>
         <input type="text" id="cin_no" name="cin_no"><br>
 
-        <label for="turnover">turnover</label><br>
+        <label for="turnover">Turnover</label><br>
         <input type="text" id="turnover" name="turnover"><br>
 
-        <label for="incorporation_date">incorporation_date</label><br>
+        <label for="incorporation_date">Incorporation Date</label><br>
         <input type="text" id="incorporation_date" name="incorporation_date"><br>
 
-	<label for="employees">employees</label><br>
+	<label for="employees">Employees</label><br>
         <input type="text" id="employees" name="employees"><br>
 
-        <label for="ctc">ctc</label><br>
+        <label for="ctc">CTC</label><br>
         <input type="text" id="ctc" name="ctc"><br>
 
         
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" onclick="validate()">
     </form>
 </body>
 </html>
