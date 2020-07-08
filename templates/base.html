@@ -11,6 +11,11 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Native -->
     <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
 
     {% block style %}
@@ -22,12 +27,13 @@
 </head>
 
 <body>
-    <!-- Need to set base Static -->
 
     <section id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">Tink Tank</a>
+                <a class="navbar-brand" href="#">
+                    <span id="brand-first">Tink</span><span id="brand-second">Tank</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -50,10 +56,14 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item">
-                            <a class="nav-link" href="signup">SignUp</a>
+                            <a class="nav-link" href="signup"><i class="fa fa-user-plus" aria-hidden="true"></i>
+                                SignUp
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login">Login</a>
+                            <a class="nav-link" href="login"><i class="fa fa-user" aria-hidden="true"></i>
+                                Login
+                            </a>
                         </li>
                     </ul>
                 </div>
