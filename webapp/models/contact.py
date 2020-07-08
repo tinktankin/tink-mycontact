@@ -1,8 +1,10 @@
 from django.db import models
 from .user import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 class Contact(models.Model):
-	score_matrix=models.CharField(max_length=30, default=None, null=True, blank=True)
+	score_matrix=models.FloatField(default=0)
 	contact_type = models.CharField(max_length=30, default=None, null=True, blank=True)
 	full_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	first_name = models.CharField(max_length=30, default=None, null=True, blank=True)
@@ -51,3 +53,10 @@ class Contact(models.Model):
 
 	class Meta:
 		unique_together = ['email', 'phone', 'user'] # Needs Verification
+
+@receiver(post_save, sender=Contact)
+def calculate_score_matrix(sender, instance, created, **kwargs):
+	if created:
+		instance.score_matrix = 0
+		instance.save()
+		print('Score matrix calculated')
