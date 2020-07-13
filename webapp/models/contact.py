@@ -10,7 +10,6 @@ class Contact(models.Model):
 	first_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	middle_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	last_name = models.CharField(max_length=30, default=None, null=True, blank=True)
-
 	company = models.CharField(max_length=30, default=None, null=True, blank=True)
 	designation = models.CharField(max_length=30, default=None, null=True, blank=True)
 	email = models.EmailField(max_length=60, default=None, null=True, blank=True)
@@ -54,9 +53,92 @@ class Contact(models.Model):
 	class Meta:
 		unique_together = ['email', 'phone', 'user'] # Needs Verification
 
+
+#scoring matrix calculation for basic matrix_type
+def basic(instance):
+	score=0
+	if instance.full_name=='':
+		if instance.first_name!='' :
+			score+=10
+		if  instance.last_name!='':
+			score+=10
+	else:
+		score+=20
+	if instance.company!='':
+		score+=20
+	if instance.designation!='':
+		score+=20
+	if instance.email!='':
+		score+=20
+	if instance.phone!='':
+		score+=20
+	return score
+
+#scoring matrix calculation for Biz matrix_type
+def biz(instance):
+	score=0
+	if instance.full_name=='':
+		if instance.first_name!='' :
+			score+=10
+		if  instance.last_name!='':
+			score+=10
+	else:
+		score+=20
+	if instance.company!='':
+		score+=20
+	if instance.designation!='':
+		score+=15
+	if instance.email!='':
+		score+=5
+	if instance.phone!='':
+		score+=20
+	if instance.location!='':
+		score+=5
+	if instance.title!='':
+		score+=15
+	return score
+
+#scoring matrix calculation for HR matrix_type
+def hr(instance):
+	score=0
+	if instance.full_name=='':
+		if instance.first_name!='' :
+			score+=5
+		if  instance.last_name!='':
+			score+=5
+	else:
+		score+=10
+	if instance.company!='':
+		score+=5
+	if instance.designation!='':
+		score+=10
+	if instance.email!='':
+		score+=20
+	if instance.phone!='':
+		score+=5
+	if instance.location!='':
+		score+=5
+	if instance.key_skills!='':
+		score+=15
+	if instance.total_exp!='':
+		score+=15
+	if instance.ctc!='':
+		score+=15
+	return score
+
+def new(instance):
+    pass
 @receiver(post_save, sender=Contact)
 def calculate_score_matrix(sender, instance, created, **kwargs):
-	if created:
-		instance.score_matrix = 0
-		instance.save()
-		print('Score matrix calculated')
+	try:
+		if created:
+			#print(instance.matrix_type)
+			instance.score_matrix = basic(instance)
+			instance.save()
+			print('Score matrix calculated')
+		else:
+			instance.score_matrix = basic(instance)
+			instance.save()
+			print('Score matrix calculated')
+	except:
+		pass
