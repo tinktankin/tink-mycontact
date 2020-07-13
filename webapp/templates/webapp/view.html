@@ -31,17 +31,26 @@ View Contacts
 	<div class='row dashboard-cards'>
 		{% for Contact in cont_instance %}
 		<div class='card col-12 col-sm-6 col-md-4 col-lg-3'>
-			<div class='card-title'>
-				<h2>
-					<span class="contact-name">{{Contact.full_name}}</span>
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-					<hr>
-					<span class="contact-email">{{Contact.email}}</span>
-					<i class="fa fa-envelope-o" aria-hidden="true"></i>
-				</h2>
-				<!-- <div class='task-count'>
-				14
-			</div> -->
+			<div class="upper-section">
+				<div class='card-title'>
+					<h2>
+						<span class="contact-name">{{Contact.full_name}}</span>
+						<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						<hr>
+						<span class="contact-email">{{Contact.email}}</span>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</h2>
+				</div>
+				<div class='hover-expand'>
+					<div class='card-options'>
+						<a class='btn' href='#'><i class="fa fa-info" aria-hidden="true"></i>
+							View
+						</a>
+						<a class='btn' href='#'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+							Edit
+						</a>
+					</div>
+				</div>
 			</div>
 			<div class='card-flap flap1'>
 				<div class='hidden-info'>
