@@ -5,7 +5,6 @@ from django.db.models.signals import post_save
 
 class Contact(models.Model):
 	score_matrix=models.FloatField(default=0)
-	#matrix_type=models.RadioField(max_length=30, default=None, null=True, blank=True)
 	contact_type = models.CharField(max_length=30, default=None, null=True, blank=True)
 	full_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	first_name = models.CharField(max_length=30, default=None, null=True, blank=True)
