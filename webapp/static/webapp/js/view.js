@@ -3,7 +3,6 @@ $(document).ready(function () {
 
     $("div.card").click(function (e) {
         e.preventDefault();
-
         var isShowing = false;
 
         if ($(this).hasClass("show-info")) {
@@ -25,7 +24,6 @@ $(document).ready(function () {
                     .addClass("show-info");
 
             }
-
             zindex++;
 
         } else {
@@ -39,22 +37,5 @@ $(document).ready(function () {
 
             zindex++;
         }
-
     });
 });
-
-// window.onload = function () {
-//     var card = document.getElementsByClassName("card")
-
-//     for (var i = 0; i < card.length; i++) {
-//         card[i].addEventListener("click", function () {
-//             console.log("clicked")
-//             var content = this.nextElementSibling;
-//             if (content.style.display === "block") {
-//                 content.style.display = "none";
-//             } else {
-//                 content.style.display = "block";
-//             }
-//         });
-//     }
-// }
