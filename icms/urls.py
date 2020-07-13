@@ -37,7 +37,5 @@ urlpatterns = [
     path('import-from-file', ImportFromFile.as_view()),
     path('addcontact', AddContacts.as_view(), name = 'addcontact'),
     path('viewcontact',ViewContact.as_view()),
-]
-
-static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

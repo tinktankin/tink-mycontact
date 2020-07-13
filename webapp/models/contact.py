@@ -53,6 +53,7 @@ class Contact(models.Model):
 	class Meta:
 		unique_together = ['email', 'phone', 'user'] # Needs Verification
 
+
 #scoring matrix calculation for basic matrix_type
 def basic(instance):
 	score=0

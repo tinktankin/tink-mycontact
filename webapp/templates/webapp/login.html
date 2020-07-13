@@ -1,5 +1,7 @@
-{% extends 'webapp/webapp_base.html' %}
+{% extends 'base.html' %}
+
 {% load static %}
+
 {% block title %}
 Login
 {% endblock title %}
@@ -28,31 +30,31 @@ Login
 </script>
 
 {% endblock script %}
+
 {% block body %}
 
-<!-- First Option -->
-<div id="login-box">
-	<div class="left-box">
-
+<!-- <div class="image-container"></div> -->
+<div class="login-box row">
+	<div class="left-box col-12 col-md-6">
 		<form method="post" name="frm1">
 			{% csrf_token %}
 			<h1>Log In</h1>
-
-			<input type="email" name="email" placeholder="Email">
-			<input type="password" name="password" placeholder="Password">
+			<p>Email ID</p>
+			<input type="email" name="email" placeholder="Enter Email">
+			<p>Password</p>
+			<input type="password" name="password" placeholder="Enter Password">
 
 			<input type="submit" value="Log In" onClick="return Validate()">
-
 		</form>
 		<hr>
 		<div class="left-bottom">
 			<div class="row">
-				<div class="col-8 forgot-pass">
+				<div class="col-7 forgot-pass">
 					Forgot your Password?
 					<br>
 					<a href="forgotpass">Click Here!</a>
 				</div>
-				<div class="col-4 signup-button">
+				<div class="col-5 signup-button">
 					<a href="signup">
 						<button class="btn-primary">Sign Up</button>
 					</a>
@@ -60,28 +62,33 @@ Login
 			</div>
 		</div>
 	</div>
+	<div class="right-box col-12 col-md-6">
+		<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">            
+			<button class="social google">
+				<i class="fa fa-google" aria-hidden="true"></i> 
+				Log in with Google
+			</button>
+		</a>
 
-
-
-	<div class="right-box">
-		<span class="signinwith">
-			Log in with
-		</span>
-		<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">
-                <button class="social google">Log in with Google</button>
-            </a>
-            <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
-			<button class="social facebook">Log in with Facebook</button>
+		<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+			<button class="social facebook">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				Log in with Facebook
+			</button>
 		</a>
 		<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">
-                <button class="social linkedin">Log in with Linkedin</button>
-            </a>
-        </div>
+			<button class="social linkedin">
+				<i class="fa fa-linkedin" aria-hidden="true"></i> 
+				Log in with Linkedin
+			</button>
+		</a>
+	</div>
+	<div class="or">
+		OR
+	</div>
 
-        <div class="or">
-            OR
-        </div>
 </div>
+
 {% endblock body %}
 
 <!-- Previous HTML -->

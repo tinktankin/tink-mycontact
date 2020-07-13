@@ -1,4 +1,4 @@
-{% extends 'webapp/webapp_base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}
 Signup
@@ -24,16 +24,39 @@ Signup
 {% endblock script %}
 
 {% block body %}
-<div id="signup-box">
-	<div class="form">
-		<form method="post" name="frm2">
-			{% csrf_token %}
-			<h1>Sign Up</h1>
-			<input type="email" name="email" placeholder="Email">
-			<input type="submit" onClick="return Validate()">
-		</form>
+
+<div class="signup-box row">
+	<div class="left-box col-6">
+		<h1>Intelligent Contact Manager System</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi maxime nostrum quam repellendus ipsum
+			facere delectus reiciendis porro quidem.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quod sunt incidunt dolore animi pariatur
+			itaque laborum, eligendi est aperiam, non vitae esse tenetur ratione eius delectus magni, voluptates
+			dignissimos?</p>
+
+		<h2>We Also deliver to you</h2>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo excepturi numquam, omnis iure nulla
+			voluptas sapiente distinctio expedita dolores et quo non ex accusamus voluptate! Consectetur animi eligendi
+			incidunt aliquid?</p>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatum, dolor repellat quaerat facere
+			harum voluptatibus </p>
+	</div>
+	<div class="right-box col-6">
+		<img src="{% static 'webapp/img/signup/black-square.png' %}" alt="sign-up-form-logo">
+
+		<div class="form-container">
+
+			<form method="post" name="frm2">
+				{% csrf_token %}
+				<h1>Sign Up</h1>
+				<input type="email" name="email" placeholder="Email">
+				<input type="submit" onClick="return Validate()">
+			</form>
+		</div>
 	</div>
 </div>
+
+
 {% endblock body %}
 
 <!-- PREVIOUS HTML -->
