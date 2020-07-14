@@ -1,11 +1,10 @@
 from django.db import models
 from .user import User
 from django.dispatch import receiver
-from django.db.models.signals import post_save
+from django.db.models.signals import pre_save
 
 class Contact(models.Model):
 	score_matrix=models.FloatField(default=0)
-	contact_type = models.CharField(max_length=30, default=None, null=True, blank=True)
 	full_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	first_name = models.CharField(max_length=30, default=None, null=True, blank=True)
 	middle_name = models.CharField(max_length=30, default=None, null=True, blank=True)
@@ -128,17 +127,8 @@ def hr(instance):
 
 def new(instance):
     pass
-@receiver(post_save, sender=Contact)
-def calculate_score_matrix(sender, instance, created, **kwargs):
-	try:
-		if created:
-			#print(instance.matrix_type)
-			instance.score_matrix = basic(instance)
-			instance.save()
-			print('Score matrix calculated')
-		else:
-			instance.score_matrix = basic(instance)
-			instance.save()
-			print('Score matrix calculated')
-	except:
-		pass
+@receiver(pre_save, sender=Contact)
+def calculate_score_matrix(sender, instance, **kwargs):
+	#print(instance.matrix_type)
+	instance.score_matrix = basic(instance)
+	print('Score matrix calculate')
