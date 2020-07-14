@@ -3,6 +3,7 @@ from .user import User
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
 
+
 class Contact(models.Model):
 	score_matrix=models.FloatField(default=0)
 	full_name = models.CharField(max_length=30, default=None, null=True, blank=True)
@@ -56,79 +57,82 @@ class Contact(models.Model):
 #scoring matrix calculation for basic matrix_type
 def basic(instance):
 	score=0
-	if instance.full_name=='':
-		if instance.first_name!='' :
+	if instance.full_name=='' and  instance.full_name!=None:
+		if instance.first_name!='' and instance.first_name!=None :
 			score+=10
-		if  instance.last_name!='':
+		if  instance.last_name!='' and instance.last_name!=None:
 			score+=10
 	else:
 		score+=20
-	if instance.company!='':
+	if instance.company!='' and instance.company!=None:
 		score+=20
-	if instance.designation!='':
+	if instance.designation!='' and instance.designation!=None:
 		score+=20
-	if instance.email!='':
+	if instance.email!='' and instance.email!=None:
 		score+=20
-	if instance.phone!='':
+	if instance.phone!='' and instance.phone!=None:
 		score+=20
+	#print(instance.full_name,instance.company,instance.designation)
 	return score
 
 #scoring matrix calculation for Biz matrix_type
 def biz(instance):
 	score=0
-	if instance.full_name=='':
-		if instance.first_name!='' :
+	if instance.full_name=='' and  instance.full_name!=None:
+		if instance.first_name!='' and instance.first_name!=None :
 			score+=10
-		if  instance.last_name!='':
+		if  instance.last_name!='' and instance.last_name!=None:
 			score+=10
 	else:
 		score+=20
-	if instance.company!='':
+	if instance.company!='' and instance.company!=None:
 		score+=20
-	if instance.designation!='':
+	if instance.designation!='' and instance.designation!=None:
 		score+=15
-	if instance.email!='':
+	if instance.email!='' and instance.email!=None:
 		score+=5
-	if instance.phone!='':
+	if instance.phone!='' and instance.phone!=None:
 		score+=20
-	if instance.location!='':
+	if instance.location!='' and instance.location!=None:
 		score+=5
-	if instance.title!='':
+	if instance.title!='' and instance.title!=None:
 		score+=15
+	#print(instance.full_name,instance.company,instance.designation)
 	return score
+
 
 #scoring matrix calculation for HR matrix_type
 def hr(instance):
 	score=0
-	if instance.full_name=='':
-		if instance.first_name!='' :
+	if instance.full_name=='' and  instance.full_name!=None:
+		if instance.first_name!='' and instance.first_name!=None :
 			score+=5
-		if  instance.last_name!='':
+		if  instance.last_name!='' and instance.last_name!=None:
 			score+=5
 	else:
 		score+=10
-	if instance.company!='':
+	if instance.company!='' and instance.company!=None:
 		score+=5
-	if instance.designation!='':
+	if instance.designation!='' and instance.designation!=None:
 		score+=10
-	if instance.email!='':
+	if instance.email!='' and instance.email!=None:
 		score+=20
-	if instance.phone!='':
+	if instance.phone!='' and instance.phone!=None:
 		score+=5
-	if instance.location!='':
+	if instance.location!='' and instance.location!=None:
 		score+=5
-	if instance.key_skills!='':
+	if instance.key_skills!='' and instance.key_skills!=None:
 		score+=15
-	if instance.total_exp!='':
+	if instance.total_exp!='' and instance.total_exp!=None:
 		score+=15
-	if instance.ctc!='':
+	if instance.ctc!='' and instance.ctc!=None:
 		score+=15
+	#print(instance.full_name,instance.company,instance.designation)
 	return score
 
 def new(instance):
     pass
 @receiver(pre_save, sender=Contact)
 def calculate_score_matrix(sender, instance, **kwargs):
-	#print(instance.matrix_type)
 	instance.score_matrix = basic(instance)
-	print('Score matrix calculate')
+	print('Score matrix calculated')
