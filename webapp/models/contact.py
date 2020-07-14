@@ -2,7 +2,7 @@ from django.db import models
 from .user import User
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
-from django.db.models.signals import post_save
+
 
 class Contact(models.Model):
 	score_matrix=models.FloatField(default=0)
