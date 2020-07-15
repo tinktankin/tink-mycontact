@@ -1,4 +1,40 @@
-<html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Import Contacts
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/importcontacts.css' %}">
+{% endblock style %}
+
+{% block body %}
+
+
+<section id="import-form">
+	<div class="import-form-container">
+		<p class="heading">Import Contacts</p>
+		<p class="from-file">Import from File</p>
+		<div class="form-container">
+			<form method="post" action="/import-from-file" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type=file name=file accept=".csv">
+				<input type=submit value=Import>
+			</form>
+		</div>
+	</div>
+</section>
+
+**UI under development
+<!-- Import from Google, Linkedin Functionality Here -->
+
+{% endblock body %}
+
+<!-- Previous HTML -->
+
+<!-- 
+	<html>
 <head>
 	<title>Import Contacts</title>
 </head>
@@ -11,5 +47,6 @@
 		<input type=file name=file accept=".csv">
 		<input type=submit value=Import>
 	</form>
-	<!-- Import from Google, LinkedIn Functionality Here -->
-</body>
+	<!-- Import from Google, LinkedIn Functionality Here 
+</body> 
+-->
