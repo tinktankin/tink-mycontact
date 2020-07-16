@@ -6,10 +6,219 @@ Contact-Detail
 {% endblock title %}
 
 {% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/contactDetail.css' %}">
 {% endblock style %}
 
 {% block script %}
+<script src="{% static 'webapp/js/contactDetail.js' %}"></script>
 {% endblock script %}
 
 {% block body %}
+<section class="contact-detail">
+    <div class="container">
+        <div class="detail-container">
+            <div class="tab-bar">
+                <button class="bar-item active-tab" onclick="tab(event,'Personal')">Personal</button>
+                <button class="bar-item" onclick="tab(event,'Corporate')">Corporate</button>
+                <button class="bar-item" onclick="tab(event,'Work')">Work</button>
+                <button class="bar-item" onclick="tab(event,'Academic')">Academic</button>
+                <button class="bar-item" onclick="tab(event,'Social')">Social</button>
+                <button class="bar-item" onclick="tab(event,'Documents')">Documents</button>
+                <button class="bar-item" onclick="tab(event,'Meetings')">Meetings</button>
+            </div>
+
+            <div id="Personal" class="tab-detail">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="info-display">
+                            <span class="info-type">Name: </span>
+                            <span class="info-value">{{Contact.first_name}}Dummy name</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+
+                            <span class="info-type">Last Name: </span>
+                            <span class="info-value">{{Contact.last_name}} Dummy Last Name</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Phone: </span>
+                            <span class="info-value">{{Contact.phone}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+
+                            <span class="info-type">Gender: </span>
+                            <span class="info-value">{{Contact.gender}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Location: </span>
+                            <span class="info-value">{{Contact.location}}</span>
+                        </div>
+                    </div>
+                    <div class="col-2 score-container">
+                        <div class="score-display">
+                            <span class="score">89%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Corporate" class="tab-detail" style="display:none">
+                <div class="row">
+                    <div class="col-10">
+                        <div>
+                            <span class="info-type">Cin: </span>
+                            <span class="info-value">{{Contact.cin_no}}</span>
+                        </div>
+                        <hr>
+                        <div>
+
+                            <span class="info-type">Company: </span>
+                            <span class="info-value">{{Contact.company}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Designation: </span>
+                            <span class="info-value">{{Contact.designation}}</span>
+                        </div>
+                        <hr>
+                        <div>
+
+                            <span class="info-type">Department: </span>
+                            <span class="info-value">{{Contact.dept}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Incorporation Date: </span>
+                            <span class="info-value">{{Contact.incorporation_date}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Business Years: </span>
+                            <span class="info-value">{{Contact.years_in_business}}</span>
+                        </div>
+                    </div>
+                    <div class="col-2 score-container">
+                        <div class="score-display">
+                            <span class="score">70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Work" class="tab-detail" style="display:none">
+                <div class="row">
+                    <div class="col-10">
+                        <div>
+                            <span class="info-type">CTC: </span>
+                            <span class="info-value">{{Contact.ctc}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Skills: </span>
+                            <span class="info-value">{{Contact.location}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Department: </span>
+                            <span class="info-value">{{Contact.dept}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Designation: </span>
+                            <span class="info-value">{{Contact.designation}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Experience: </span>
+                            <span class="info-value">{{Contact.total_exp}}</span>
+                        </div>
+                    </div>
+                    <div class="col-2 score-container">
+                        <div class="score-display">
+                            <span class="score">62%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Academic" class="tab-detail" style="display:none">
+                <div class="row">
+                    <div class="col-10">
+                        <div>
+                            <span class="info-type">College: </span>
+                            <span class="info-value">{{Contact.college}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Degree: </span>
+                            <span class="info-value">{{Contact.degree}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">University: </span>
+                            <span class="info-value">{{Contact.university}}</span>
+                        </div>
+                        <hr>
+                        <div>
+
+                            <span class="info-type">Passing Year: </span>
+                            <span class="info-value">{{Contact.passing_year}}</span>
+                        </div>
+                    </div>
+                    <div class="col-2 score-container">
+                        <div class="score-display">
+                            <span class="score">65%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Social" class="tab-detail" style="display:none">
+                <div class="row">
+                    <div class="col-10">
+                        <div>
+                            <span class="info-type">Facebook ID: </span>
+                            <span class="info-value">{{Contact.facebook_url}}</span>
+                        </div>
+                        <hr>
+                        <div>
+
+                            <span class="info-type">Skype ID: </span>
+                            <span class="info-value">{{Contact.skype_id}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Linkedin ID: </span>
+                            <span class="info-value">{{Contact.linkedin_url}}</span>
+                        </div>
+                    </div>
+                    <div class="col-2 score-container">
+                        <div class="score-display">
+                            <span class="score">10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Documents" class="tab-detail" style="display:none">
+                <h4>Documents will come here</h4>
+            </div>
+
+            <div id="Meetings" class="tab-detail" style="display:none">
+                <h4>Meetings will come here</h4>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-success">Save</button>
+            <button class="btn btn-warning">Exit</button>
+            <button class="btn btn-secondary">Add New Contact</button>
+        </div>
+    </div>
+
+</section>
 {% endblock body %}
