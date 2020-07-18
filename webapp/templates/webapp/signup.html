@@ -26,7 +26,7 @@ Signup
 {% block body %}
 
 <div class="signup-box row">
-	<div class="left-box col-6">
+	<div class="left-box col-6 disabled-text">
 		<h1>Intelligent Contact Manager System</h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi maxime nostrum quam repellendus ipsum
 			facere delectus reiciendis porro quidem.</p>
@@ -48,14 +48,13 @@ Signup
 
 			<form method="post" name="frm2">
 				{% csrf_token %}
-				<h1>Sign Up</h1>
+				<h1 class="disabled-text">Sign Up</h1>
 				<input type="email" name="email" placeholder="Email">
 				<input type="submit" onClick="return Validate()">
 			</form>
 		</div>
 	</div>
 </div>
-
 
 {% endblock body %}
 

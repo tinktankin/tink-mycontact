@@ -11,207 +11,85 @@ View Contacts
 
 {% block script %}
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-	crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 <script src="{% static 'webapp/js/view.js' %}"></script>
 {% endblock script %}
 
 {% block body %}
 
-<section id="add-contact">
-	<div class="new-contact-container">
-		<div>
-			<a href="addcontact">
-				<button class="btn btn-success">Add Contact</button>
-			</a>
-		</div>
-	</div>
+<section class="contact-options">
+    <div class="contact-options-container flex-column flex-sm-row">
+        <div class="left-aligned flex-column flex-sm-row">
+            <div id="btnContainer" class="d-none d-md-block">
+                <button id="list" class="btn"><i class="fa fa-bars"></i> List</button>
+                <button id="grid" class="btn active"><i class="fa fa-th-large"></i> Card</button>
+            </div>
+            <div class="filters">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Group
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Group 1</a>
+                    <a class="dropdown-item" href="#">Group 2</a>
+                    <a class="dropdown-item" href="#">Group 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-aligned flex-column flex-sm-row">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <div class="add-contact">
+                <a href="addcontact">
+                    <button class="btn btn-success">Add Contact</button>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="contact-view">
-	<div class='row dashboard-cards'>
-		{% for Contact in cont_instance %}
-		<div class='card col-12 col-sm-6 col-md-4 col-lg-3'>
-			<div class="upper-section">
-				<div class='card-title'>
-					<h2>
-						<span class="contact-name">{{Contact.full_name}}</span>
-						<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-						<hr>
-						<span class="contact-email">{{Contact.email}}</span>
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-					</h2>
-				</div>
-				<div class='hover-expand'>
-					<div class='card-options'>
-						<a class='btn' href='#'><i class="fa fa-info" aria-hidden="true"></i>
-							View
-						</a>
-						<a class='btn' href='#'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-							Edit
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class='card-flap flap1'>
-				<div class='hidden-info'>
-					<ul class='expanded-info'>
-						<li>
-							<span class="info-type">First Name: </span>
-							<span class="info-value">{{Contact.first_name}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Middle Name: </span>
-							<span class="info-value">{{Contact.middle_name}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Last Name: </span>
-							<span class="info-value">{{Contact.last_name}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Company: </span>
-							<span class="info-value">{{Contact.company}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Designation: </span>
-							<span class="info-value">{{Contact.designation}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Phone: </span>
-							<span class="info-value">{{Contact.phone}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Location: </span>
-							<span class="info-value">{{Contact.location}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Gender: </span>
-							<span class="info-value">{{Contact.gender}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Title: </span>
-							<span class="info-value">{{Contact.title}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Department: </span>
-							<span class="info-value">{{Contact.dept}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">University: </span>
-							<span class="info-value">{{Contact.university}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Degree: </span>
-							<span class="info-value">{{Contact.degree}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Passing year: </span>
-							<span class="info-value">{{Contact.passing_year}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">College: </span>
-							<span class="info-value">{{Contact.college}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Linkedin: </span>
-							<span class="info-value">{{Contact.linkedin_url}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Facebook: </span>
-							<span class="info-value">{{Contact.facebook_url}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Skype: </span>
-							<span class="info-value">{{Contact.skype_id}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Industry: </span>
-							<span class="info-value">{{Contact.industry}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Country: </span>
-							<span class="info-value">{{Contact.country}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">State: </span>
-							<span class="info-value">{{Contact.state}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Zip: </span>
-							<span class="info-value">{{Contact.zip_code}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Skills: </span>
-							<span class="info-value">{{Contact.key_skills}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Experience: </span>
-							<span class="info-value">{{Contact.total_exp}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Years in Business: </span>
-							<span class="info-value">{{Contact.years_in_business}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Cin.No: </span>
-							<span class="info-value">{{Contact.cin_no}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Turnover: </span>
-							<span class="info-value">{{Contact.turnover}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Incorporation Date: </span>
-							<span class="info-value">{{Contact.incorporation_date}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">Employees: </span>
-							<span class="info-value">{{Contact.employees}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-						<li>
-							<span class="info-type">CTC: </span>
-							<span class="info-value">{{Contact.ctc}}</span>
-							<i class="fa fa-pencil edit" aria-hidden="true"></i>
-						</li>
-					</ul>
-				</div>
-				<div class='card-flap flap2'>
-					<div class='card-actions'>
-						<a class='btn' href='#'><i class="fa fa-times" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
-
-	</div>
+<section class="contact-view">
+    <div class="container-fluid">
+        <div class="row view-group">
+            {% for Contact in cont_instance %}
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="contact-name-container">
+                        <span class="contact-name">{{Contact.full_name}}</span>
+                        <i class="name-icon fa fa-user-circle-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="contact-email-container">
+                        <span class="contact-email">{{Contact.email}}</span>
+                        <i class="email-icon fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="contact-phone-container">
+                        <span class="contact-phone">{{Contact.phone}}</span>
+                        <i class="phone-icon fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="contact-detail" target="_blank"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </span>
+                        <span>
+                            <a href="contact-detail" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        </span>
+                        <span>
+                            <a href="contact-detail" target="_blank"><i class="fa fa-expand" aria-hidden="true"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
 
 {% endblock body %}

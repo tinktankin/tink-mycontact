@@ -38,10 +38,10 @@ Login
 	<div class="left-box col-12 col-md-6">
 		<form method="post" name="frm1">
 			{% csrf_token %}
-			<h1>Log In</h1>
-			<p>Email ID</p>
+			<h1 class="disabled-text">Log In</h1>
+			<p class="disabled-text">Email ID</p>
 			<input type="email" name="email" placeholder="Enter Email">
-			<p>Password</p>
+			<p class="disabled-text">Password</p>
 			<input type="password" name="password" placeholder="Enter Password">
 
 			<input type="submit" value="Log In" onClick="return Validate()">
@@ -50,9 +50,9 @@ Login
 		<div class="left-bottom">
 			<div class="row">
 				<div class="col-7 forgot-pass">
-					Forgot your Password?
+					<span class="disabled-text">Forgot your Password?</span>
 					<br>
-					<a href="forgotpass">Click Here!</a>
+					<a href=" forgotpass">Click Here!</a>
 				</div>
 				<div class="col-5 signup-button">
 					<a href="signup">
@@ -83,7 +83,7 @@ Login
 			</button>
 		</a>
 	</div>
-	<div class="or">
+	<div class="or disabled-text">
 		OR
 	</div>
 

@@ -18,7 +18,8 @@ from django.urls import path, include
 from django.conf.urls import url
 from webapp.views import (SignUp, Verify, LoginUser, LogoutUser, Dashboard,
                           ImportContacts, ForgotPassword, ResetPassword,
-                          ImportFromFile, addcontact, viewcontact, AddContacts, ViewContact, ContactForm)
+                          ImportFromFile, addcontact, viewcontact, AddContacts,
+                          ViewContact, ContactForm, ContactDetail)
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,7 +27,7 @@ from webapp.views import HomePage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePage.as_view(), name = 'home'),
+    path('', HomePage.as_view(), name='home'),
     path('signup', SignUp.as_view()),
     path('verify', Verify.as_view()),
     path('login', LoginUser.as_view(), name='login'),
@@ -37,7 +38,8 @@ urlpatterns = [
     path('forgotpass', ForgotPassword.as_view(), name='forgotpass'),
     path('resetpass', ResetPassword.as_view(), name='resetpass'),
     path('import-from-file', ImportFromFile.as_view()),
-    path('addcontact', AddContacts.as_view(), name = 'addcontact'),
-    path('viewcontact',ViewContact.as_view()),
+    path('addcontact', AddContacts.as_view(), name='addcontact'),
+    path('viewcontact', ViewContact.as_view()),
     path('contactform', ContactForm.as_view(), name='contactform'),
+    path('contact-detail', ContactDetail.as_view(), name='contact-detail'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

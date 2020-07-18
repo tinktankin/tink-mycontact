@@ -1,41 +1,17 @@
 $(document).ready(function () {
-    var zindex = 10;
-
-    $("div.card").click(function (e) {
-        e.preventDefault();
-        var isShowing = false;
-
-        if ($(this).hasClass("show-info")) {
-            isShowing = true
-        }
-
-        if ($("div.dashboard-cards").hasClass("showing")) {
-            $("div.card.show-info")
-                .removeClass("show-info");
-
-            if (isShowing) {
-                $("div.dashboard-cards")
-                    .removeClass("showing");
-            } else {
-                $(this)
-                    .css({
-                        zIndex: zindex
-                    })
-                    .addClass("show-info");
-
-            }
-            zindex++;
-
-        } else {
-            $("div.dashboard-cards")
-                .addClass("showing");
-            $(this)
-                .css({
-                    zIndex: zindex
-                })
-                .addClass("show-info");
-
-            zindex++;
-        }
+    $('#list').click(function (event) {
+        event.preventDefault();
+        $('.item').addClass('list-group-item');
+        $('.view-group').css({
+            padding: '0 0'
+        });
+    });
+    $('#grid').click(function (event) {
+        event.preventDefault();
+        $('.item').removeClass('list-group-item');
+        $('.item').addClass('grid-group-item');
+        $('.view-group').css({
+            padding: '0 50px'
+        });
     });
 });
