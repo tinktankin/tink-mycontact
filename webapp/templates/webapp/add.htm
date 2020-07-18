@@ -10,24 +10,6 @@ Add Contacts
 <link rel="stylesheet" href="{% static 'webapp/css/add.css' %}">
 {% endblock style %}
 
-{% block script%}
-<script language="JavaScript">
-    function validate() {
-        var model;
-        if (document.getElementById('basic').checked) {
-            model = "basic";
-        } else if (document.getElementById('biz').checked) {
-            model = "biz";
-        } else if (document.getElementById('hr').checked) {
-            model = "hr";
-        } else {
-            alert("Select Scoring matrix first");
-            return;
-        }
-    }
-</script>
-{% endblock script%}
-
 {% block body %}
 
 <section id="form-container">
@@ -35,16 +17,7 @@ Add Contacts
         <!-- <form method="post" action="/addcontact"> -->
         <form method="POST">
             {% csrf_token %}
-            <div class="scoring-matrix">
-                <label for="score_matrix">Select Scoring Matrix: </label>
-                <input type="radio" name="radiobtn" value="Basic" id="basic"> Basic
-                <input type="radio" name="radiobtn" value="Biz" id="biz"> Biz
-                <input type="radio" name="radiobtn" value="HR" id="hr"> HR
-            </div>
             <br>
-            <label for="contact_type">Contact Type</label>
-            <input type="text" id="contact_type" name="contact_type">
-
             <label for="full_name">Full Name</label>
             <input type="text" id="full_name" name="full_name">
 
@@ -138,17 +111,15 @@ Add Contacts
             <label for="ctc">CTC</label>
             <input type="text" id="ctc" name="ctc">
 
-            <input type="submit" value="submit" onclick="validate()">
+            <input type="submit" value="submit">
         </form>
     </div>
 </section>
 
 
 {% endblock body %}
-
 <!--
 <html>
-
 <head>
     <title>
         add contacts

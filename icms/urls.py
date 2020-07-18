@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf.urls import url
 from webapp.views import (SignUp, Verify, LoginUser, LogoutUser, Dashboard,
                           ImportContacts, ForgotPassword, ResetPassword,
-                          ImportFromFile, addcontact, viewcontact, AddContacts, ViewContact)
+                          ImportFromFile, addcontact, viewcontact, AddContacts, ViewContact, ContactForm)
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -39,4 +39,5 @@ urlpatterns = [
     path('import-from-file', ImportFromFile.as_view()),
     path('addcontact', AddContacts.as_view(), name = 'addcontact'),
     path('viewcontact',ViewContact.as_view()),
+    path('contactform', ContactForm.as_view(), name='contactform'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
