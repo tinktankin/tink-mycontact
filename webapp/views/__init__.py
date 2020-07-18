@@ -8,4 +8,6 @@ from .dashboard import Dashboard
 from .importcontacts import ImportContacts, ImportFromFile
 from .forgotpass import ForgotPassword
 from .resetpass import ResetPassword
+from .homepage import HomePage
+from .contactform import ContactForm
 from .contactdetail import ContactDetail
