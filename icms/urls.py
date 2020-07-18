@@ -22,13 +22,15 @@ from webapp.views import (SignUp, Verify, LoginUser, LogoutUser, Dashboard,
 
 from django.conf import settings
 from django.conf.urls.static import static
+from webapp.views import HomePage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomePage.as_view(), name = 'home'),
     path('signup', SignUp.as_view()),
     path('verify', Verify.as_view()),
     path('login', LoginUser.as_view(), name='login'),
-    path('logout', LogoutUser.as_view()),
+    path('logout', LogoutUser.as_view(), name='logout'),
     url('', include('social_django.urls', namespace='social')),
     path('dashboard', Dashboard.as_view(), name='dashboard'),
     path('import-contacts', ImportContacts.as_view(), name='import-contacts'),
@@ -38,4 +40,3 @@ urlpatterns = [
     path('addcontact', AddContacts.as_view(), name = 'addcontact'),
     path('viewcontact',ViewContact.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-

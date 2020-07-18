@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -181,3 +182,4 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '320927325405-h2t8atgva5njlep8lm0ugad53qiibn40.a
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '24-xM6XXDXgDbSVP2G_j8j1W'
 
 LOGIN_REDIRECT_URL = '/dashboard'
+django_heroku.settings(locals())
