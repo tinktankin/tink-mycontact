@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Meetings
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/meeting.css' %}">
+{% endblock style %}
+
+{% block body %}
+
+<h1>This is the Meetings Page</h1>
+
+<a href="addmeeting">
+    go to Add Meeting page
+</a>
+<br>
+<a href="meeting-detail">
+    go to Meeting Detail Page
+</a>
+
+{% endblock body %}
