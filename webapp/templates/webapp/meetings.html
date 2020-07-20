@@ -9,16 +9,380 @@ Meetings
 <link rel="stylesheet" href="{% static 'webapp/css/meeting.css' %}">
 {% endblock style %}
 
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="{% static 'webapp/js/meeting.js' %}"></script>
+{% endblock script %}
+
 {% block body %}
 
-<h1>This is the Meetings Page</h1>
+<section class="meeting-options">
+    <div class="meeting-options-container flex-column flex-sm-row">
+        <div class="left-aligned flex-column flex-sm-row">
+            <div id="btnContainer" class="d-none d-md-block">
+                <button id="list" class="btn"><i class="fa fa-bars"></i> List</button>
+                <button id="grid" class="btn active"><i class="fa fa-th-large"></i> Card</button>
+            </div>
+        </div>
+        <div class="right-aligned flex-column flex-sm-row">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <div class="add-meeting">
+                <a href="addmeeting">
+                    <button class="btn btn-success">Scheudle Meeting</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-<a href="addmeeting">
-    go to Add Meeting page
-</a>
-<br>
-<a href="meeting-detail">
-    go to Meeting Detail Page
-</a>
+<section class="meeting-view">
+    <div class="container-fluid">
+        <div class="row view-group">
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-view">
+                    <div class="meeting-title-container">
+                        <span class="meeting-title">Weekly Progress Meeting</span>
+                        <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-location-container">
+                        <span class="meeting-location">Google Meet</span>
+                        <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-attendees-container">
+                        <span class="meeting-attendees">Meeting Attendees</span>
+                        <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="meeting-dateTime-container">
+                        <div class="date">
+                            <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20-07-2020</span>
+                        </div>
+                        <div class="time">
+                            <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="meeting-dateTime">20:30</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="action-icons">
+                        <span>
+                            <a href="#" class="checkmark">
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="meeting-detail" target="_blank">
+                                <i class="fa fa-expand" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock body %}
