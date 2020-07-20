@@ -8,21 +8,6 @@ Signup
 <link rel="stylesheet" href="{% static 'webapp/css/signup.css' %}">
 {% endblock style %}
 
-{% block script %}
-<script language="JavaScript">
-	function Validate() {
-		if (document.frm2.email.value == "") {
-			alert("Invaild mail id");
-			window.location = "http://127.0.0.1:8000/signup";
-			return false;
-		} else {
-			return true;
-		}
-
-	}
-</script>
-{% endblock script %}
-
 {% block body %}
 
 <div class="signup-box row">
@@ -49,8 +34,8 @@ Signup
 			<form method="post" name="frm2">
 				{% csrf_token %}
 				<h1 class="disabled-text">Sign Up</h1>
-				<input type="email" name="email" placeholder="Email">
-				<input type="submit" onClick="return Validate()">
+				<input type="email" name="email" placeholder="Email" required/>
+				<input type="submit" >
 			</form>
 		</div>
 	</div>
