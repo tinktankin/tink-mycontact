@@ -6,16 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact-Form</title>
     </head>
+
     <body>
         <form method="post">
             {% csrf_token %}
             <p>{{owner}}</p>
             <label for="contact_type">Select Scoring Matrix: </label>
-            <input type="radio" name="radiobtn" value="Basic" id="basic" required/> Basic
-            <input type="radio" name="radiobtn" value="Biz" id="biz" required/> Biz
-            <input type="radio" name="radiobtn" value="HR" id="hr" required/> HR
-            <br>Enter URL: <input type="text" name="url" placeholder="URL" >
+            <input type="radio" name="radiobtn" value="Basic" id="basic"> Basic
+            <input type="radio" name="radiobtn" value="Biz" id="biz"> Biz
+            <input type="radio" name="radiobtn" value="HR" id="hr"> HR
+            <br>Enter URL: <input type="text" name="url" placeholder="URL">
             <input type="submit" value="Submit">
         </form>
     </body>
+
 </html>
