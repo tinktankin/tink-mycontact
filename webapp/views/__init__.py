@@ -11,6 +11,3 @@ from .resetpass import ResetPassword
 from .homepage import HomePage
 from .contactform import ContactForm
 from .contactdetail import ContactDetail
-from .addMeeting import AddMeeting
-from .meetings import Meetings
-from .meetingDetail import MeetingDetail

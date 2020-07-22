@@ -10,6 +10,27 @@ Login
 <link rel="stylesheet" href="{% static 'webapp/css/login.css' %}">
 {% endblock style %}
 
+{% block script %}
+
+<!-- <script>
+	alert("Conencted")
+</script> -->
+
+<script language="JavaScript">
+	function Validate() {
+		if (document.frm1.email.value == "") {
+			alert("Invaild mail id");
+			window.location = "http://127.0.0.1:8000/login";
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+</script>
+
+{% endblock script %}
+
 {% block body %}
 
 <!-- <div class="image-container"></div> -->
@@ -19,9 +40,9 @@ Login
 			{% csrf_token %}
 			<h1 class="disabled-text">Log In</h1>
 			<p class="disabled-text">Email ID</p>
-			<input type="email" name="email" placeholder="Enter Email" required/>
+			<input type="email" name="email" placeholder="Enter Email">
 			<p class="disabled-text">Password</p>
-			<input type="password" name="password" placeholder="Enter Password" required/>
+			<input type="password" name="password" placeholder="Enter Password">
 
 			<input type="submit" value="Log In" onClick="return Validate()">
 		</form>

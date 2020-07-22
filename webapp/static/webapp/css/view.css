@@ -124,10 +124,9 @@ body {
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 10px;
     padding: 5px 10px;
-    height: auto;
+    height: 160px;
     position: relative;
     width: auto;
-    overflow: auto;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
 }
