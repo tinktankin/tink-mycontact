@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Add Meeting
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/addMeeting.css' %}">
+{% endblock style %}
+
+{% block script %}
+<script src="{% static 'webapp/js/addMeeting.js' %}"></script>
+{% endblock script %}
+
+{% block body %}
+
+<section class="addmeeting-form">
+    <div class="form-container">
+        <h1 class="">Schedule Meeting</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <br>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location">
+
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+
+            <label for="attendees">Attendees</label>
+            <div class="attendees">
+                <input type="text" id="attendees" name="attendees" class="attendee">
+                <input type="button" value="Add" class="add-person">
+            </div>
+            <ul></ul>
+
+            <label for="meeting-time">Choose a time for Meeting</label>
+            <input type="datetime-local" id="meeting-time" name="meeting-time" min="2020-07-21T00:00"
+                max="2025-07-20T00:00">
+
+            <input type="submit" value="Schedule">
+        </form>
+    </div>
+</section>
+
+{% endblock body %}
