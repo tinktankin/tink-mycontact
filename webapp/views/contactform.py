@@ -17,5 +17,8 @@ class ContactForm(View):
         contact_type = str(request.POST["radiobtn"])
         url = request.POST.get('url')
         contactform = form(owner=owner, contact_type=contact_type, url=url)
-        contactform.save()
+        try:
+            contactform.save()
+        except:
+            return HttpResponse('You have already filled the form')
         return HttpResponse('Contact form added successfully')

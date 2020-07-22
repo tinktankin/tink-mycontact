@@ -9,9 +9,9 @@
     <p>Check your Email and enter the otp and enter new password</p>    
     <form method="post">
         {% csrf_token %}
-        OTP: <input type="text" name="otp">
-        Email: <input type="email" name="email">
-		NewPassword: <input type="password" name="password">
+        OTP: <input type="text" name="otp" required/>
+        Email: <input type="email" name="email" required/>
+		NewPassword: <input type="password" name="password" required/>
 		<input type="submit" value="Submit">
 	</form>
 </body>
