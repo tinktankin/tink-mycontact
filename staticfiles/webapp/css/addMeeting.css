@@ -1,0 +1,164 @@
+:root {
+    font-size: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: #f8f8f8;
+}
+
+/* Section add-meeting-form */
+
+.addmeeting-form .form-container {
+    padding: 10px;
+    margin: 50px auto;
+    max-width: 500px;
+    background-color: #f0f0f0;
+    overflow: auto;
+}
+
+.addmeeting-form .form-container h1 {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.addmeeting-form .form-container label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+}
+
+.addmeeting-form .form-container label:first-of-type {
+    margin-top: 0;
+}
+
+.addmeeting-form .form-container input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background: transparent;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.addmeeting-form .form-container textarea {
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    height: 180px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background: transparent;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.addmeeting-form .form-container .attendees {
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.addmeeting-form .form-container .attendees input[type=text] {
+    width: 75%;
+}
+
+.addmeeting-form .form-container .attendees input[type=button] {
+    width: 20%;
+    border: none;
+    outline: none;
+    background-color: #0275d8;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.addmeeting-form .form-container .attendees input[type=button]:hover {
+    background-color: #0063b9;
+}
+
+
+.addmeeting-form .form-container ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.addmeeting-form .form-container ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #e74c3c;
+    height: 30px;
+    margin-right: 10px;
+    color: white;
+    width: 0;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+.addmeeting-form .form-container li:hover span {
+    width: 30px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.addmeeting-form .form-container input[type='datetime-local'] {
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background: transparent;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.addmeeting-form .form-container input[type=submit] {
+    margin-top: 1.4rem;
+    width: 20%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: green;
+    border-radius: 50px;
+    height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    float: right;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all .07s ease-in-out;
+}
+
+.addmeeting-form .form-container input[type=submit]:hover {
+    background-color: green;
+    color: rgba(255, 255, 255, 1);
+    transition: all .07s ease-in-out;
+    transform: scale(1.03);
+}
+
+.addmeeting-form .form-container input[type=submit]:focus {
+    outline: none;
+    border: 2px solid rgb(0, 71, 0);
+}
