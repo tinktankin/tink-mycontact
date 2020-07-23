@@ -7,15 +7,18 @@ HomePage
 {% endblock title %}
 
 {% block style %}
-
+<link rel="stylesheet" href="{% static 'webapp/css/home.css' %}">
 {% endblock style %}
 
 {% block script %}
-
+<!-- <script src="{% static 'webapp/js/home.js' %}"></script> -->
 {% endblock script %}
 
 {% block body %}
-
-    <h1>Welcome To the Home Page!</h1>
-
+<h1>Welcome To the Home Page!</h1>
+<h2>We are not done with this page so instead you can watch a panda</h2>
+<section class="panda">
+    <div id="runner"></div>
+    <div id="road"></div>
+</section>
 {% endblock body %}

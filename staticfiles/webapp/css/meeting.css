@@ -1,0 +1,238 @@
+:root {
+    font-size: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: #f8f8f8;
+}
+
+/* Section - meeting Options */
+
+.meeting-options .meeting-options-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.meeting-options .meeting-options-container .left-aligned {
+    display: flex;
+}
+
+.meeting-options .meeting-options-container .left-aligned #btnContainer {
+    align-self: center;
+    margin-bottom: 2px;
+}
+
+.meeting-options .meeting-options-container .right-aligned {
+    display: flex;
+}
+
+.meeting-options .meeting-options-container .layout-style {
+    display: inline-block;
+}
+
+.meeting-options .meeting-options-container .page {
+    align-self: center;
+    margin: 5px 10px;
+}
+
+.meeting-options .meeting-options-container .right-aligned .form-inline {
+    align-self: center;
+    align-content: center;
+    margin: 5px 10px;
+}
+
+.meeting-options .meeting-options-container .right-aligned .form-inline .btn {
+    margin: 0 auto;
+}
+
+.meeting-options .meeting-options-container .right-aligned .add-meeting {
+    align-self: center;
+    margin: 5px 10px;
+}
+
+.meeting-options .meeting-options-container .right-aligned .add-meeting button {
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-weight: 500;
+    transition: all .1s ease-in-out;
+}
+
+.meeting-options .meeting-options-container .right-aligned .add-meeting button:hover {
+    transform: scale(1.02);
+    transition: all .1s ease-in-out;
+}
+
+/* Section - Meeting View */
+
+.meeting-view .view-group {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    padding: 0 50px;
+}
+
+.meeting-view .view-group .item {
+    padding: 10px 10px;
+}
+
+.list-group-item {
+    background: none;
+}
+
+.meeting-view .view-group .item.list-group-item {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 60%;
+    padding: 0;
+    border: 0;
+}
+
+.meeting-view .view-group .item.list-group-item:before,
+.item.list-group-item:after {
+    display: table;
+    content: " ";
+}
+
+.meeting-view .view-group .item.list-group-item:after {
+    clear: both;
+}
+
+.meeting-view .view-group .item .card-view {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: auto;
+    position: relative;
+    width: auto;
+    overflow: auto;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.meeting-view .view-group .item .card-view hr {
+    margin: 0.5rem 0;
+}
+
+.meeting-view .view-group .item .card-view:hover {
+    /* box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5); */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .4);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.meeting-view .view-group .item .card-view .meeting-title-container .meeting-title,
+.meeting-view .view-group .item .card-view .meeting-title-container .title-icon {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.meeting-view .view-group .item .card-view .meeting-location-container .meeting-location,
+.meeting-view .view-group .item .card-view .meeting-location-container .location-icon {
+    font-size: 1.6rem;
+}
+
+.meeting-view .view-group .item .card-view .meeting-attendees-container .meeting-attendees,
+.meeting-view .view-group .item .card-view .meeting-attendees-container .attendees-icon {
+    font-size: 1.5rem;
+}
+
+.meeting-view .view-group .item .card-view .meeting-dateTime-container .meeting-dateTime,
+.meeting-view .view-group .item .card-view .meeting-dateTime-container .dateTime-icon {
+    font-size: 1.4rem;
+}
+
+.meeting-view .view-group .item .card-view .meeting-title-container,
+.meeting-view .view-group .item .card-view .meeting-location-container,
+.meeting-view .view-group .item .card-view .meeting-attendees-container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.4;
+}
+
+.meeting-view .view-group .item .card-view .meeting-title-container i,
+.meeting-view .view-group .item .card-view .meeting-location-container i,
+.meeting-view .view-group .item .card-view .meeting-attendees-container i {
+    align-self: center;
+    float: right;
+    font-size: 1.9rem;
+}
+
+.meeting-view .view-group .item .card-view .meeting-title-container i:hover,
+.meeting-view .view-group .item .card-view .meeting-location-container i:hover,
+.meeting-view .view-group .item .card-view .meeting-attendees-container i:hover,
+.meeting-view .view-group .item .card-view .meeting-dateTime-container i:hover {
+    color: #808080;
+    cursor: pointer;
+}
+
+.meeting-view .view-group .item .card-view .meeting-dateTime-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.meeting-view .view-group .item .card-view .meeting-dateTime-container i {
+    align-self: center;
+    font-size: 1.9rem;
+    margin-right: 10px;
+}
+
+.meeting-view .view-group .item .card-view .action-icons {
+    margin-top: 7px;
+    float: right;
+    padding-right: 10px;
+}
+
+.meeting-view .view-group .item .card-view .action-icons a:hover {
+    text-decoration: none;
+}
+
+.meeting-view .view-group .item .card-view .action-icons i {
+    font-size: 1.8rem;
+    margin-left: 1.5rem;
+}
+
+.meeting-done {
+    /* text-decoration: line-through; */
+    color: #D8D8D8;
+    transition: all 2s ease-in-out;
+}
+
+/* .list {
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+} */
+
+/* .my-animation {
+    animation: fade 1s steps(90) forwards;
+    -webkit-animation: fade 1s steps(90) forwards;
+    -moz-animation: fade 1s steps(90) forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.0;
+    }
+} */

@@ -1,5 +1,6 @@
 from django.db import models
 from .user import User
+from webapp.models.contactform import ContactForm
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
 
@@ -130,7 +131,16 @@ def hr(instance):
 
 def new(instance):
     pass
+
 @receiver(pre_save, sender=Contact)
 def calculate_score_matrix(sender, instance, **kwargs):
-	instance.score_matrix = basic(instance)
-	print('Score matrix calculated')
+    contact_type = ContactForm.objects.all()#query set to fetch the contact_type
+    print(contact_type)
+    if 'Basic' in contact_type:
+        print('basic')
+    if 'HR' in contact_type:
+        print('hr')
+    if 'Biz' in contact_type:
+        print('biz')
+    instance.score_matrix = basic(instance)
+    print('Score matrix calculated')
