@@ -10,9 +10,6 @@ class AddMeeting(LoginRequiredMixin,View):
     redirect_field_name = 'http://127.0.0.1:8000/addmeeting'
     def get(self, request):
         return render(request, 'webapp/addMeeting.html')
-    
-    def get_js(self,request):
-        return render(request, 'webapp/static/webapp/js/addMeeting.js')
 
     def post(self, request):
         title=request.POST.get('title')
