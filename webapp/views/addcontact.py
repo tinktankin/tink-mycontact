@@ -7,6 +7,8 @@ from django.contrib.auth.models import User
 #from .models import Contact
 
 class AddContacts(LoginRequiredMixin,View):
+    login_url = 'http://127.0.0.1:8000/login'
+    redirect_field_name = 'http://127.0.0.1:8000/addcontact'
     def save_profile(sender, instance, **kwargs):
         instance.profile.save()
         post_save.connect(save_profile, sender=User)
