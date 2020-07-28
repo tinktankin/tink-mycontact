@@ -11,7 +11,6 @@ Import Contacts
 
 {% block body %}
 
-
 <section id="import-form">
 	<div class="import-form-container">
 		<p class="heading">Import Contacts</p>
@@ -27,26 +26,5 @@ Import Contacts
 </section>
 
 **UI under development
-<!-- Import from Google, Linkedin Functionality Here -->
 
 {% endblock body %}
-
-<!-- Previous HTML -->
-
-<!-- 
-	<html>
-<head>
-	<title>Import Contacts</title>
-</head>
-
-<body>
-	<h1>Import Contacts</h1>
-	<h2>Import from File</h2>
-	<form method="post" action="/import-from-file" enctype="multipart/form-data">
-		{% csrf_token %}
-		<input type=file name=file accept=".csv">
-		<input type=submit value=Import>
-	</form>
-	<!-- Import from Google, LinkedIn Functionality Here 
-</body> 
--->

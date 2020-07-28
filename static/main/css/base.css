@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -14,16 +13,6 @@ body {
     list-style: none;
     text-decoration: none;
 }
-
-/* .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    font-weight: 600;
-} */
-
-/* .navbar-brand {
-    font-size: larger;
-    letter-spacing: 1px;
-} */
 
 .navbar .navbar-brand #brand-first {
     font-weight: 200;
@@ -64,7 +53,6 @@ a.nav-link:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     font-weight: 600;
-    /* margin-top: 30px; */
 }
 
 #footer .container {
