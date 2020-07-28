@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block title %}
@@ -12,16 +11,15 @@ Login
 
 {% block body %}
 
-<!-- <div class="image-container"></div> -->
 <div class="login-box row">
 	<div class="left-box col-12 col-md-6">
 		<form method="post" name="frm1">
 			{% csrf_token %}
 			<h1 class="disabled-text">Log In</h1>
 			<p class="disabled-text">Email ID</p>
-			<input type="email" name="email" placeholder="Enter Email" required/>
+			<input type="email" name="email" placeholder="Enter Email" required />
 			<p class="disabled-text">Password</p>
-			<input type="password" name="password" placeholder="Enter Password" required/>
+			<input type="password" name="password" placeholder="Enter Password" required />
 
 			<input type="submit" value="Log In" onClick="return Validate()">
 		</form>
@@ -61,54 +59,7 @@ Login
 				Log in with Linkedin
 			</button>
 		</a>
-	</div>
-	<div class="or disabled-text">
-		OR
-	</div>
-
+	</div>	
 </div>
 
 {% endblock body %}
-
-<!-- Previous HTML -->
-
-<!--
-<html>
-<head>
-	<title>Login</title>
-</head>
-
-<script language="JavaScript">
-function Validate(){
-if(document.frm1.email.value=="")
-{
-alert("Invaild mail id");
-window.location="http://127.0.0.1:8000/login";
-return false;
-}
-else
-{
-    return true;
-}
-
-}
-</script>
-
-<body>
-	<form method="post" name="frm1"  >
-		{% csrf_token %}
-		Email: <input type="email" name="email" >
-		Password: <input type="password" name="password">
-		<input type="submit" value="Login" onClick="return Validate()">
-		<br><br>
-	<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }">Login Using Google</a><br>
-	<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a><br>
-		<a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }">Login with Linkedin</a>
-	<br><br>
-	</form>
-	New User? <a href="signup"><button>Register</button></a>
-	<br><a href="forgotpass"><button>Forgot Password</button></a>
-
-
-</body>
--->
