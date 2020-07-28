@@ -13,6 +13,7 @@
 body {
     height: 100%;
     background: #f8f8f8;
+    padding-bottom: 90px !important;
 }
 
 /* Section add-meeting-form */
@@ -23,6 +24,7 @@ body {
     max-width: 500px;
     background-color: #f0f0f0;
     overflow: auto;
+    height: fit-content;
 }
 
 .addmeeting-form .form-container h1 {

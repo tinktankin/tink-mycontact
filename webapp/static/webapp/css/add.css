@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -11,10 +10,14 @@ html {
     box-sizing: border-box;
 }
 
-
-#form-container {
-    margin-bottom: 140px;
+body {
+    padding-bottom: 90px !important;
 }
+
+
+/* #form-container {
+    margin-bottom: 140px;
+} */
 
 #form-container .container {
     padding: 10px;
