@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}
 Signup
 {% endblock title %}
@@ -11,7 +12,7 @@ Signup
 {% block body %}
 
 <div class="signup-box row">
-	<div class="left-box col-6 disabled-text">
+	<div class="left-box col-12 col-xl-6 order-2 order-xl-1 disabled-text">
 		<h1>Intelligent Contact Manager System</h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi maxime nostrum quam repellendus ipsum
 			facere delectus reiciendis porro quidem.</p>
@@ -26,50 +27,18 @@ Signup
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatum, dolor repellat quaerat facere
 			harum voluptatibus </p>
 	</div>
-	<div class="right-box col-6">
-		<img src="{% static 'webapp/img/signup/black-square.png' %}" alt="sign-up-form-logo">
-
+	<div class="right-box col-12 col-xl-6 order-1 order-xl-2">
 		<div class="form-container">
+			<img src="{% static 'webapp/img/signup/black-square.png' %}" alt="sign-up-form-logo">
 
 			<form method="post" name="frm2">
 				{% csrf_token %}
 				<h1 class="disabled-text">Sign Up</h1>
-				<input type="email" name="email" placeholder="Email" required/>
-				<input type="submit" >
+				<input type="email" name="email" placeholder="Email" required />
+				<input type="submit">
 			</form>
 		</div>
 	</div>
 </div>
 
 {% endblock body %}
-
-<!-- PREVIOUS HTML -->
-
-<!--
-<html>
-<head>
-	<title>Sign Up</title>
-</head>
-<script language="JavaScript">
-function Validate(){
-if(document.frm2.email.value=="")
-{
-    alert("Invaild mail id");
-    window.location="http://127.0.0.1:8000/signup";
-    return false;
-}
-else
-{
-    return true;
-}
-
-}
-</script>
-<body>
-	<form method="post" name="frm2">
-		{% csrf_token %}
-		Email: <input type="email" name="email">
-		<input type="submit" onClick="return Validate()">
-	</form>
-</body>
--->

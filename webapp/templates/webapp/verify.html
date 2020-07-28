@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}
 Set Password
 {% endblock title %}
@@ -9,6 +10,7 @@ Set Password
 {% endblock style %}
 
 {% block body %}
+
 <div id="verify-box">
 	<div class="verify-form">
 		<h1>Set password</h1>
@@ -22,25 +24,5 @@ Set Password
 		</form>
 	</div>
 </div>
+
 {% endblock body %}
-
-<!-- PREVIOUS HTML -->
-
-<!-- 
-<html>
-<head>
-	<title>Set Password</title>
-</head>
-
-<body>
-	<h1>Welcome! Please set password</h1>
-	<form method="post">
-		{% csrf_token %}
-		First Name: <input type="text" name="fname">
-		Last Name: <input type="text" name="lname"><br>
-		New Password: <input type="password" name="password1">
-		Repeat Password <input type="password" name="password2"><br>
-		<input type="submit">
-	</form>
-</body> 
--->

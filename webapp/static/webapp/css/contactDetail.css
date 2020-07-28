@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -14,7 +13,7 @@ html {
 body {
     height: 100%;
     background-color: #f8f8f8;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding-bottom: 90px !important;
 }
 
 .contact-detail .container {
@@ -75,13 +74,8 @@ body {
     font-weight: 500;
 }
 
-/* .contact-detail .container .tab-detail span.info-value {
-    border-bottom: 1px solid #e0e0e0;
-} */
-
 .contact-detail .container .tab-detail .score-container {
     display: flex;
-    /* justify-content: center; */
 }
 
 .contact-detail .container .tab-detail .score-container .score-display {

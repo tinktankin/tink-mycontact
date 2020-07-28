@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -9,45 +8,46 @@ html {
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    /* z-index: -1; */
 }
 
 body {
     height: 100%;
     background-color: #f8f8f8;
+    padding-bottom: 90px !important;
 }
 
 .signup-box {
-    height: 600px;
-    width: 900px;
+    height: auto;
+    width: 50%;
     margin: 5% auto;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); */
+    overflow: auto;
 }
 
 .signup-box .left-box {
-    height: 600px;
-    width: 450px;
+    height: auto;
     padding: 30px 15px;
     font-size: 1.3rem;
     text-align: justify;
 }
 
 .signup-box .right-box {
-    position: relative;
-    height: 600px;
-    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .signup-box .right-box .form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 80%;
     padding: 40px 10px 30px 10px;
     background-color: #f0f0f0;
     border-radius: 50px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
 }
 
 .signup-box .left-box h1 {
@@ -69,15 +69,12 @@ body {
     text-align: center;
 }
 
-.signup-box .right-box img {
-    z-index: 1;
+.signup-box .right-box .form-container img {
     position: absolute;
     width: 130px;
     border-radius: 50%;
-    margin: 0 auto;
-    top: 26%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -50%;
+    align-self: center;
 }
 
 .signup-box .right-box .form-container input[type='email'] {
@@ -149,4 +146,38 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@media (max-width:1428px) {
+    .signup-box {
+        width: 50%;
+    }
+}
+
+@media (max-width:1200px) {
+    .signup-box {
+        width: 60%;
+    }
+
+    .signup-box .right-box {
+        padding: 130px 0 30px 0;
+    }
+}
+
+@media (max-width:992px) {
+    .signup-box {
+        width: 70%;
+    }
+}
+
+@media (max-width:768px) {
+    .signup-box {
+        width: 80%;
+    }
+}
+
+@media (max-width:576px) {
+    .signup-box {
+        width: 90%;
+    }
 }

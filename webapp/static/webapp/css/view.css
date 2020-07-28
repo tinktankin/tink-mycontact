@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -14,6 +13,7 @@ html {
 body {
     height: 100%;
     background: #f8f8f8;
+    padding-bottom: 90px !important;
 }
 
 /* Section - Contact Options */
@@ -137,7 +137,6 @@ body {
 }
 
 .contact-view .view-group .item .card-view:hover {
-    /* box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5); */
     box-shadow: 0 4px 5px rgba(0, 0, 0, .4);
     -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .4);
     transition: all 0.3s ease;

@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -14,42 +13,14 @@ html {
 body {
     background-image: url(../img/login-css/grey-gradient-2.jpg);
     height: 100%;
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
     background-size: cover;
     background-color: #fff;
     background-blend-mode: luminosity;
-    /* opacity: 0.8; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    /* background: #bdc3c7;
-    background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);
-    background: linear-gradient(to right, #bdc3c7, #2c3e50); */
+    padding-bottom: 90px !important;
 }
-
-/* .image-container {
-    background-image: url(../img/login-css/isaac-sloman-v7d4Wm0ENls-unsplash.jpg) no-repeat center center fixed;
-
-}
-
-*/
-/* ======================================================== */
-/* Changing forced Box Color on Chrome ===> Need Review */
-/* ======================================================== */
-
-/* input:-webkit-autofill,
-input:focus:-webkit-autofill,
-input:-internal-autofill-selected {
-    -webkit-box-shadow: inset 0 0 0px 9999px rgba(0, 0, 0, 0.8) !important;
-    color: #fff !important;
-}
-
-input:focus,
-input:-webkit-autofill:focus {
-    border-color: rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: inset 0 0 0px 9999px white, 0 0 8px rgba(102, 175, 233, 0.6);
-} */
 
 h1 {
     margin: 0 0 20px 0;
@@ -77,6 +48,7 @@ input[type='password'] {
     height: 40px;
     color: #fff;
     font-size: 16px;
+    overflow: hidden;
 }
 
 input[type='submit'] {
@@ -91,10 +63,10 @@ input[type='submit'] {
     text-transform: uppercase;
     transition: 0.2s ease;
     cursor: pointer;
+    overflow: auto;
 }
 
 input[type='submit']:hover {
-    /* cursor: pointer; */
     color: rgba(255, 255, 255, 1);
     transform: scale(1.02);
 }
@@ -115,27 +87,24 @@ p {
 }
 
 .login-box {
-    height: 33rem;
-    width: 600px;
-    /* background-color: royalblue; */
+    height: fit-content;
+    width: 40%;
     margin: 180px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    overflow: auto;
 }
 
 .login-box .left-box {
-    height: 33rem;
+    height: auto;
     width: 300px;
     padding: 30px 15px;
-    /* border: 2px solid black; */
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .login-box .right-box {
-    height: 33rem;
+    height: auto;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
-
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,17 +112,11 @@ p {
 }
 
 .login-box .left-box .left-bottom {
-    /* position: absolute;
-    bottom: 30px; */
     color: #fff;
     margin-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
 }
-
-/* .login-box .left-box .left-bottom .signup-button {
-    padding-top: 6px;
-} */
 
 .login-box .left-box .left-bottom .signup-button button {
     padding: 5px;
@@ -161,6 +124,7 @@ p {
     border: none;
     border-radius: 20px;
     outline: none;
+    overflow: auto;
 }
 
 .login-box .left-box .left-bottom .signup-button button:hover {
@@ -184,7 +148,6 @@ p {
     padding: 15px 10px 15px 10px;
     margin: 0 auto;
     border: none;
-    /* border: 2px solid black; */
     outline: none;
     border-radius: 25px;
     color: white;
@@ -236,23 +199,6 @@ p {
     height: 10px;
 }
 
-.login-box .or {
-    display: block;
-    color: #fff;
-    font-size: 1.2em;
-    font-weight: bold;
-    position: relative;
-    top: -220px;
-    left: 280px;
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    background-origin: 0 2px 4px rgba(0, 0, 0, 0.6);
-    line-height: 40px;
-    text-align: center;
-}
-
 .disabled-text {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -262,21 +208,32 @@ p {
     user-select: none;
 }
 
+@media (max-width:1428px) {
+    .login-box {
+        width: 50%;
+    }
+}
+
+@media (max-width:1200px) {
+    .login-box {
+        width: 60%;
+    }
+}
+
+@media (max-width:992px) {
+    .login-box {
+        width: 70%;
+    }
+}
+
 @media (max-width:768px) {
-    .login-box .or {
-        display: block;
-        color: #fff;
-        font-size: 1.2em;
-        font-weight: bold;
-        position: relative;
-        top: -422px;
-        left: 280px;
-        width: 40px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.4);
-        border-radius: 50%;
-        background-origin: 0 2px 4px rgba(0, 0, 0, 0.6);
-        line-height: 40px;
-        text-align: center;
+    .login-box {
+        width: 80%;
+    }
+}
+
+@media (max-width:576px) {
+    .login-box {
+        width: 90%;
     }
 }

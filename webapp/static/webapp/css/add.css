@@ -1,5 +1,4 @@
-:root,
-html {
+:root {
     font-size: 12px;
 }
 
@@ -11,17 +10,14 @@ html {
     box-sizing: border-box;
 }
 
-
-#form-container {
-    margin-bottom: 140px;
+body {
+    padding-bottom: 90px !important;
 }
 
 #form-container .container {
     padding: 10px;
     margin: 50px auto;
-    /* background-color: orange; */
     max-width: 500px;
-    /* border: 2px solid brown; */
     background-color: #f8f8f8;
 }
 
@@ -79,12 +75,12 @@ input[type=submit] {
     font-weight: 600;
     margin-left: 78%;
     color: rgba(255, 255, 255, 0.9);
-    /* transition: 0.1s ease; */
+    transition: all .07s ease-in-out;
 }
 
 input[type=submit]:hover {
     background-color: green;
     color: rgba(255, 255, 255, 1);
-    transition: .07s;
+    transition: all .07s ease-in-out;
     transform: scale(1.03);
 }
