@@ -12,7 +12,7 @@ Signup
 {% block body %}
 
 <div class="signup-box row">
-	<div class="left-box col-6 disabled-text">
+	<div class="left-box col-12 col-xl-6 order-2 order-xl-1 disabled-text">
 		<h1>Intelligent Contact Manager System</h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi maxime nostrum quam repellendus ipsum
 			facere delectus reiciendis porro quidem.</p>
@@ -27,10 +27,9 @@ Signup
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatum, dolor repellat quaerat facere
 			harum voluptatibus </p>
 	</div>
-	<div class="right-box col-6">
-		<img src="{% static 'webapp/img/signup/black-square.png' %}" alt="sign-up-form-logo">
-
+	<div class="right-box col-12 col-xl-6 order-1 order-xl-2">
 		<div class="form-container">
+			<img src="{% static 'webapp/img/signup/black-square.png' %}" alt="sign-up-form-logo">
 
 			<form method="post" name="frm2">
 				{% csrf_token %}
