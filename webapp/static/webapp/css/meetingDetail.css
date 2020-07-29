@@ -17,92 +17,95 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.meeting-detail .meeting-detail-container {
+.meeting-detail .meeting-container {
     margin: 70px auto 0 auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.meeting-detail .meeting-container .meeting-detail-container {
     padding: 20px 30px;
     height: auto;
-    width: 40%;
     background-color: #f0f0f0;
-    border-radius: 10px;
     overflow: auto;
 }
 
-.meeting-detail .meeting-detail-container hr {
+.meeting-detail .meeting-container .meeting-detail-container hr {
     margin: 0;
     margin-bottom: 10px;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container,
-.meeting-detail .meeting-detail-container .meeting-location-container,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container,
-.meeting-detail .meeting-detail-container .meeting-attendees-container,
-.meeting-detail .meeting-detail-container .meeting-notes-container {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.meeting-detail .meeting-detail-container .meeting-dateTime-container {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container {
     justify-content: space-evenly;
     font-size: 1.8rem;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container .title-heading,
-.meeting-detail .meeting-detail-container .meeting-location-container .location-heading,
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-heading,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-heading {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container .title-heading,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container .location-heading,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-heading,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-heading {
     font-size: 1.8rem;
 }
 
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-heading {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-heading {
     text-align: justify;
     padding-right: 10px;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container .title-heading .meeting-title,
-.meeting-detail .meeting-detail-container .meeting-location-container .location-heading .meeting-location,
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-heading .meeting-attendees,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .date span.date,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .time span.time {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container .title-heading .meeting-title,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container .location-heading .meeting-location,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-heading .meeting-attendees,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .date span.date,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .time span.time {
     font-weight: 500;
     letter-spacing: 0.03rem;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container .title-heading .meeting-title-value,
-.meeting-detail .meeting-detail-container .meeting-location-container .location-heading .meeting-location-value,
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-heading .meeting-attendees-value,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes-value,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .meeting-dateTime {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container .title-heading .meeting-title-value,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container .location-heading .meeting-location-value,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-heading .meeting-attendees-value,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes-value,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .meeting-dateTime {
     font-size: 1.7rem;
     font-weight: 300;
     letter-spacing: 0.05rem;
 }
 
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes-value div {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-heading .meeting-notes-value div {
     text-align: justify;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container .title-icon,
-.meeting-detail .meeting-detail-container .meeting-location-container .location-icon,
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-icon,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-icon,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .date-icon,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .time-icon {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container .title-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container .location-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .date-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .time-icon {
     font-size: 1.9rem;
+    padding-right: 10px;
 }
 
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-icon,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-icon {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-icon,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-icon {
     align-self: flex-start;
 }
 
-.meeting-detail .meeting-detail-container .meeting-title-container .title-icon:hover,
-.meeting-detail .meeting-detail-container .meeting-location-container .location-icon:hover,
-.meeting-detail .meeting-detail-container .meeting-attendees-container .attendees-icon:hover,
-.meeting-detail .meeting-detail-container .meeting-notes-container .notes-icon:hover,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .date-icon:hover,
-.meeting-detail .meeting-detail-container .meeting-dateTime-container .time-icon:hover {
+.meeting-detail .meeting-container .meeting-detail-container .meeting-title-container .title-icon:hover,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-location-container .location-icon:hover,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-attendees-container .attendees-icon:hover,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-notes-container .notes-icon:hover,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .date-icon:hover,
+.meeting-detail .meeting-container .meeting-detail-container .meeting-dateTime-container .time-icon:hover {
     color: #808080;
     cursor: pointer;
 }
@@ -110,33 +113,45 @@ body {
 .meeting-detail .btn-container {
     margin: 0 auto;
     height: auto;
-    width: 40%;
     overflow: auto;
     display: flex;
     justify-content: space-evenly;
 }
 
 .meeting-detail .btn-container button {
+    width: 145px;
     border-radius: 20px;
     padding: 5px 15px;
     font-weight: 500;
     margin: 5px 0;
+    background-color: #3463ae;
+    border: none;
+    color: #fff;
 }
 
-@media (max-width:1200px) {
-    .meeting-detail .meeting-detail-container {
+.meeting-detail .btn-container button:hover {
+    transform: scale(1.01);
+}
+
+@media (max-width:1250px) {
+    .meeting-detail .meeting-container {
         width: 60%;
+    }
+
+    .meeting-detail .btn-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width:992px) {
-    .meeting-detail .meeting-detail-container {
+    .meeting-detail .meeting-container {
         width: 70%;
     }
 }
 
 @media (max-width:768px) {
-    .meeting-detail .meeting-detail-container {
+    .meeting-detail .meeting-container {
         width: 80%;
     }
 }
