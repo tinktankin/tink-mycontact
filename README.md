@@ -62,9 +62,9 @@ You are now set up to start contributing to this repository.
 ### After Setting Up
 * Step 1: Update your remote fork. (**Always** before making your changes)
 ```bash
-git push origin master
 git fetch upstream
 git merge upstream/master master
+git push origin master
 ```
 * Step 2: Write your code. Add files to staging and commit to your forked repository.
 ```bash
