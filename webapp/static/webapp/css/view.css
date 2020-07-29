@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300;400&display=swap');
+
 :root {
     font-size: 12px;
 }
@@ -14,6 +16,7 @@ body {
     height: 100%;
     background: #f8f8f8;
     padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Section - Contact Options */
@@ -152,18 +155,19 @@ body {
 .contact-view .view-group .item .card-view .contact-email,
 .contact-view .view-group .item .card-view .email-icon {
     font-size: 1.6rem;
+    font-weight: 300;
 }
 
 .contact-view .view-group .item .card-view .contact-phone,
 .contact-view .view-group .item .card-view .phone-icon {
     font-size: 1.5rem;
+    padding-left: 2px;
 }
 
 .contact-view .view-group .item .card-view .contact-name-container,
 .contact-view .view-group .item .card-view .contact-email-container,
 .contact-view .view-group .item .card-view .contact-phone-container {
     display: flex;
-    justify-content: space-between;
     line-height: 1.4;
 }
 
@@ -171,14 +175,15 @@ body {
 .contact-view .view-group .item .card-view .contact-email-container i,
 .contact-view .view-group .item .card-view .contact-phone-container i {
     align-self: center;
-    float: right;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
+    margin-right: 7px;
+    color: #707070;
 }
 
 .contact-view .view-group .item .card-view .contact-name-container i:hover,
 .contact-view .view-group .item .card-view .contact-email-container i:hover,
 .contact-view .view-group .item .card-view .contact-phone-container i:hover {
-    color: #808080;
+    color: black;
     cursor: pointer;
 }
 
