@@ -1,0 +1,110 @@
+:root {
+    font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    padding-bottom: 90px !important;
+    background-color: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.forgotpass .forgotpass-form-container {
+    background-color: #F0F0F0;
+    width: 30%;
+    margin: 50px auto;
+    border-radius: 20px;
+}
+
+.forgotpass .forgotpass-form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.forgotpass .forgotpass-form-container form label {
+    font-size: 1.9rem;
+    font-weight: 500;
+    display: block;
+    align-self: flex-start;
+}
+
+.forgotpass .forgotpass-form-container form input[type='email'] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.325);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.forgotpass .forgotpass-form-container form input[type='email']:-webkit-autofill,
+.forgotpass .forgotpass-form-container form input[type='email']:focus:-webkit-autofill,
+.forgotpass .forgotpass-form-container form input[type='email']:-internal-autofill-selected {
+    box-shadow: inset 0 0 0px 9999px #F5F5F5 !important;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F5F5F5 !important;
+}
+
+.forgotpass .forgotpass-form-container form input[type='email']:focus,
+.forgotpass .forgotpass-form-container form input[type='email']:-webkit-autofill:focus {
+    box-shadow: inset 0 0 0px 9999px #F5F5F5, 0 0 8px #F5F5F5;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F5F5F5, 0 0 8px #F5F5F5;
+}
+
+.forgotpass .forgotpass-form-container form input[type='submit'] {
+    height: 2.4rem;
+    width: 20%;
+    display: block;
+    align-self: flex-end;
+    overflow: auto;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: 500;
+}
+
+.forgotpass .forgotpass-form-container form input[type='submit']:hover {
+    background-color: #238f3c;
+    transform: scale(1.02);
+}
+
+.forgotpass .forgotpass-form-container form input[type='submit']:focus {
+    border: 2px solid #238f3c;
+}
+
+@media screen and (max-width:1420px) {
+    .forgotpass .forgotpass-form-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .forgotpass .forgotpass-form-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .forgotpass .forgotpass-form-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .forgotpass .forgotpass-form-container {
+        width: 90%;
+    }
+}

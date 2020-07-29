@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # 'django.contrib.staticfiles',
     'webapp.apps.WebappConfig',
     'social_django',
 ]
@@ -123,9 +123,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticroot')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 # Authentication Model for Users
 AUTH_USER_MODEL = 'webapp.User'
