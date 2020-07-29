@@ -14,6 +14,7 @@ body {
     height: 100%;
     background: #f8f8f8;
     padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Section add-meeting-form */
@@ -29,7 +30,7 @@ body {
 
 .addmeeting-form .form-container h1 {
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0.05rem;
 }
 
@@ -38,7 +39,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 0;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
@@ -56,7 +57,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
     background: transparent;
     font-size: 1.6rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .addmeeting-form .form-container textarea {
@@ -88,7 +89,7 @@ body {
     outline: none;
     background-color: #0275d8;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 20px;
 }
 
@@ -147,7 +148,7 @@ body {
     height: 30px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-weight: 600;
+    font-weight: 500;
     float: right;
     color: rgba(255, 255, 255, 0.9);
     transition: all .07s ease-in-out;
