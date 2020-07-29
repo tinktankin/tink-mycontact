@@ -2,72 +2,121 @@
     font-size: 12px;
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
-    background-color: #d8e9f3;
-    color: #777;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    padding-bottom: 90px !important;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 90px !important;
+    background-color: #F8F8F8;
+}
+
+.verify-box .verify-form {
+    margin: 100px auto;
+    padding: 20px 30px;
+    width: 40%;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+}
+
+.verify-box .verify-form h1 {
+    margin-bottom: 1.6rem;
+    font-size: 3rem;
+    font-weight: 500;
     text-align: center;
 }
 
-input[type='text'],
-input[type='password'] {
+.verify-box .verify-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verify-box .verify-form form label {
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
     display: block;
-    box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 4px;
-    width: 220px;
-    height: 32px;
+    align-self: flex-start;
+}
+
+.verify-box .verify-form form input[type='text'],
+.verify-box .verify-form form input[type='password'] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    background: none;
     border: none;
     outline: none;
-    border-bottom: 1px solid #aaa;
-    font-size: 15px;
-    transition: 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.325);
+    font-weight: 300;
+    font-size: 1.3rem;
 }
 
-input[type='submit'] {
-    margin-bottom: 28px;
-    width: 120px;
-    height: 32px;
-    background-color: #68a7ca;
+.verify-box .verify-form input[type='text']:-webkit-autofill,
+.verify-box .verify-form input[type='text']:focus:-webkit-autofill,
+.verify-box .verify-form input[type='text']:-internal-autofill-selected,
+.verify-box .verify-form input[type='password']:-webkit-autofill,
+.verify-box .verify-form input[type='password']:focus:-webkit-autofill,
+.verify-box .verify-form input[type='password']:-internal-autofill-selected {
+    box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
+}
+
+.verify-box .verify-form input[type='text']:focus,
+.verify-box .verify-form input[type='text']:-webkit-autofill:focus,
+.verify-box .verify-form input[type='password']:focus,
+.verify-box .verify-form input[type='password']:-webkit-autofill:focus {
+    box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
+}
+
+.verify-box .verify-form form input[type='submit'] {
+    margin-bottom: 2px;
+    height: 2.4rem;
+    width: 20%;
+    display: block;
+    align-self: flex-end;
+    overflow: auto;
     border: none;
-    border-radius: 2px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #28a745;
     color: #fff;
     font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.2s ease;
-    cursor: pointer;
+    overflow: auto;
 }
 
-input[type='submit']:hover,
-input[type='submit']:focus {
-    background-color: #8dbdd8;
-    transition: 0.2s ease;
+.verify-box .verify-form form input[type='submit']:hover {
+    background-color: #238f3c;
+    transform: scale(1.02);
 }
 
-.verify-form {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 300px;
-    height: 400px;
+@media screen and (max-width:1420px) {
+    .verify-box .verify-form {
+        width: 50%;
+    }
 }
 
-#verify-box {
-    position: relative;
-    margin: 5% auto;
-    height: 380px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    width: 300px;
+@media screen and (max-width:1200px) {
+    .verify-box .verify-form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .verify-box .verify-form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .verify-box .verify-form {
+        width: 90%;
+    }
 }

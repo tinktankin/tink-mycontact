@@ -1,16 +1,45 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Forgot Password
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/forgotpass.css' %}">
+{% endblock style %}
+
+{% block body %}
+
+<section class="forgotpass">
+    <div class="forgotpass-form-container">
+        <form method="post">
+            {% csrf_token %}
+            <label for="email">Please enter your email</label>
+            <input type="email" name="email" required id="email" />
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+{% endblock body %}
+
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
 </head>
+
 <body>
     <form method="post">
-		{% csrf_token %}
-		Email: <input type="email" name="email" required/>
-		<input type="submit" value="Submit">
-	</form>
-    
+        {% csrf_token %}
+        Email: <input type="email" name="email" required />
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
-</html>
+
+</html> -->
