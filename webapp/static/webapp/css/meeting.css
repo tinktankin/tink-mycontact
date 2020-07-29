@@ -14,6 +14,7 @@ body {
     height: 100%;
     background: #f8f8f8;
     padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Section - meeting Options */
@@ -187,23 +188,32 @@ body {
 .meeting-view .view-group .item .card-view .meeting-location-container,
 .meeting-view .view-group .item .card-view .meeting-attendees-container {
     display: flex;
-    justify-content: space-between;
     line-height: 1.4;
 }
 
 .meeting-view .view-group .item .card-view .meeting-title-container i,
 .meeting-view .view-group .item .card-view .meeting-location-container i,
-.meeting-view .view-group .item .card-view .meeting-attendees-container i {
+.meeting-view .view-group .item .card-view .meeting-attendees-container i,
+.meeting-view .view-group .item .card-view .meeting-dateTime-container i {
     align-self: center;
-    float: right;
     font-size: 1.9rem;
+    margin-right: 1rem;
+    color: #707070;
+}
+
+.meeting-view .view-group .item .card-view .meeting-location-container i {
+    padding: 0 7px
+}
+
+.meeting-view .view-group .item .card-view .meeting-attendees-container i {
+    padding-right: 5px;
 }
 
 .meeting-view .view-group .item .card-view .meeting-title-container i:hover,
 .meeting-view .view-group .item .card-view .meeting-location-container i:hover,
 .meeting-view .view-group .item .card-view .meeting-attendees-container i:hover,
 .meeting-view .view-group .item .card-view .meeting-dateTime-container i:hover {
-    color: #808080;
+    color: black;
     cursor: pointer;
 }
 

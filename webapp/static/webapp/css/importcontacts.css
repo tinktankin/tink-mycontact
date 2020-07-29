@@ -14,15 +14,16 @@ body {
     height: 100%;
     background-color: #f8f8f8;
     padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .import-form-container {
     background-color: #f0f0f0;
-    min-width: auto;
-    max-width: 500px;
+    width: 40%;
     margin: 50px auto;
-    padding: 30px 20px;
+    padding: 20px 30px;
     text-align: center;
+    overflow: auto;
 }
 
 .import-form-container p {
@@ -30,32 +31,69 @@ body {
 }
 
 .import-form-container p.heading {
-    font-size: 2.9rem;
-    font-weight: 300;
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
 }
 
 .import-form-container p.from-file {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
+    margin-bottom: 0.6rem;
 }
 
-
-.import-form-container .form-container {
-    padding: 10px 50px;
+.import-form-container .form-container form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .import-form-container .form-container input[type='submit'] {
-    display: block;
-    margin: 10px auto;
     height: 30px;
-    width: 80px;
-    background-color: green;
+    width: 20%;
+    background-color: #28a745;
     border: none;
+    outline: none;
     border-radius: 20px;
     color: white;
     font-size: 1.4rem;
     font-weight: 500;
+}
+
+.import-form-container .form-container input[type='submit']:hover {
+    background-color: #238f3c;
+    transform: scale(1.02);
+}
+
+.import-form-container .form-container input[type='submit']:focus {
+    border: 2px solid #238f3c;
+}
+
+@media screen and (max-width:1420px) {
+    .import-form-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .import-form-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .import-form-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .import-form-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .import-form-container {
+        width: 90%;
+    }
 }

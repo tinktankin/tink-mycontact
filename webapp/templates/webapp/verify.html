@@ -11,18 +11,22 @@ Set Password
 
 {% block body %}
 
-<div id="verify-box">
+<section class="verify-box">
 	<div class="verify-form">
 		<h1>Set password</h1>
 		<form method="post">
 			{% csrf_token %}
-			<input type="text" name="fname" placeholder="First Name">
-			<input type="text" name="lname" placeholder="Last Name">
-			<input type="password" name="password1" placeholder="New Password">
-			<input type="password" name="password2" placeholder="Repeat Password">
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" id="fname">
+			<label for="lname">Last Name</label>
+			<input type="text" name="lname" id="lname">
+			<label for="password1">Enter Password</label>
+			<input type="password" name="password1" id="password1">
+			<label for="password2">Re-enter Password</label>
+			<input type="password" name="password2" id="password2">
 			<input type="submit">
 		</form>
 	</div>
-</div>
+</section>
 
 {% endblock body %}

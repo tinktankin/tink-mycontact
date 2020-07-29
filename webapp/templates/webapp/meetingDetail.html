@@ -12,63 +12,68 @@ Meeting Detail
 {% block body %}
 
 <section class="meeting-detail">
-    <div class="meeting-detail-container">
-        <div class="meeting-title-container">
-            <div class="title-heading">
-                <span class="meeting-title">Title:</span>
-                <span class="meeting-title-value">Weekly Progress Meeting</span>
+    <div class="meeting-container">
+        <div class="meeting-detail-container">
+            <div class="meeting-title-container">
+                <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
+                <div class="title-heading">
+                    <span class="meeting-title">Title:</span>
+                    <span class="meeting-title-value">Weekly Progress Meeting</span>
+                </div>
             </div>
-            <i class="title-icon fa fa-address-card-o" aria-hidden="true"></i>
-        </div>
-        <hr>
-        <div class="meeting-location-container">
-            <div class="location-heading">
-                <span class="meeting-location">Location:</span>
-                <span class="meeting-location-value">Google Meet</span>
+            <hr>
+            <div class="meeting-location-container">
+                <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
+                <div class="location-heading">
+                    <span class="meeting-location">Location:</span>
+                    <span class="meeting-location-value">Google Meet</span>
+                </div>
             </div>
-            <i class="location-icon fa fa-map-marker" aria-hidden="true"></i>
-        </div>
-        <hr>
-        <div class="meeting-dateTime-container">
-            <div class="date">
-                <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
-                <span class="date">Date:</span>
-                <span class="meeting-dateTime">25-07-2020</span>
-            </div>
+            <hr>
+            <div class="meeting-dateTime-container">
+                <div class="date">
+                    <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                    <span class="date">Date:</span>
+                    <span class="meeting-dateTime">25-07-2020</span>
+                </div>
 
-            <div class="time">
-                <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
-                <span class="time">Time:</span>
-                <span class="meeting-dateTime">12:00</span>
+                <div class="time">
+                    <i class="time-icon fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="time">Time:</span>
+                    <span class="meeting-dateTime">12:00</span>
+                </div>
+            </div>
+            <hr>
+            <div class="meeting-attendees-container">
+                <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+                <div class="attendees-heading">
+                    <span class="meeting-attendees">Attendees:</span>
+                    <span class="meeting-attendees-value">Sohan, Harjeet, Miraaj, Sudarshan, Prakhar</span>
+                </div>
+            </div>
+            <hr>
+            <div class="meeting-notes-container">
+                <i class="notes-icon fa fa-file-pdf-o" aria-hidden="true"></i>
+                <div class="notes-heading">
+                    <span class="meeting-notes">Notes:</span>
+                    <span class="meeting-notes-value">Meeting About Weekly Progress Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Laborum, vitae? Et impedit cum id alias quod rem dolore non quidem. Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Assumenda, tempore nisi qui quia praesentium
+                        voluptas
+                        corporis, maiores eum tenetur iste id! Nam, quam doloremque! Nobis deserunt veritatis non maxime
+                        consequuntur?</span>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="meeting-attendees-container">
-            <div class="attendees-heading">
-                <span class="meeting-attendees">Attendees:</span>
-                <span class="meeting-attendees-value">Sohan, Harjeet, Miraaj, Sudarshan, Prakhar</span>
-            </div>
-            <i class="attendees-icon fa fa-users" aria-hidden="true"></i>
+        <div class="btn-container">
+            <button class="btn">Edit</button>
+            <button class="btn">Delete</button>
+            <button class="btn">Save</button>
+            <button class="btn">Exit</button>
+            <a href="addmeeting" target="_blank"><button class="btn btn-secondary">Scheudle Meeting</button></a>
         </div>
-        <hr>
-        <div class="meeting-notes-container">
-            <div class="notes-heading">
-                <span class="meeting-notes">Notes:</span>
-                <span class="meeting-notes-value">Meeting About Weekly Progress Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Laborum, vitae? Et impedit cum id alias quod rem dolore non quidem. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Assumenda, tempore nisi qui quia praesentium voluptas
-                    corporis, maiores eum tenetur iste id! Nam, quam doloremque! Nobis deserunt veritatis non maxime
-                    consequuntur?</span>
-            </div>
-            <i class="notes-icon fa fa-file-pdf-o" aria-hidden="true"></i>
-        </div>
-    </div>
-    <div class="btn-container flex-column flex-md-row">
-        <button class="btn btn-primary">Edit</button>
-        <button class="btn btn-danger">Delete</button>
-        <button class="btn btn-success">Save</button>
-        <button class="btn btn-warning">Exit</button>
-        <a href="addmeeting" target="_blank"><button class="btn btn-secondary">Scheudle Meeting</button></a>
     </div>
 </section>
 
