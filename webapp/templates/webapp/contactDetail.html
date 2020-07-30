@@ -243,7 +243,12 @@ Contact-Detail
             </div>
 
             <div id="Documents" class="tab-detail" style="display:none">
-                <h4>Documents will come here</h4>
+                 <a href='documents'><h4>Click here to view attached documents</h4></a><br>
+                <form method="post"  method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type=file name=fileUpload  accept=".csv,.pdf,.docx,.pptx,.doc,.ppt,.xlsx">
+				<input type=submit value=Import>
+                </form>
             </div>
 
             <div id="Meetings" class="tab-detail" style="display:none">
