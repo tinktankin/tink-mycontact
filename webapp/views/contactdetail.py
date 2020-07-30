@@ -31,4 +31,4 @@ class ContactDetail(View):
         # Code to copy selected file into .files folder
         for data in file1.readlines():
             write.write(data)
-        return render(request, 'webapp/contactDetail.html',{'cont_instance': cont_instance}
+        return render(request, 'webapp/contactDetail.html',{'cont_instance': cont_instance})
