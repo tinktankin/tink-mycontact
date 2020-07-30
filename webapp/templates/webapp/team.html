@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Meet the Team
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'webapp/css/team.css' %}">
+{% endblock style %}
+
+{% block body %}
+<section class="team-page">
+    <div class="team-wrapper">
+        <div class="row">
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/suneil.jpg' %}" alt="Image not found...!">
+                <div class="member-name">Suneil Stanly</div>
+                <div class="member-title">Project Mentor</div>
+                <a href="https://www.linkedin.com/in/suneilstanly/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+                    Stanly has a broad functional experience leading Strategic Planning,
+                    Stakeholder Management, Creative Problem Solving, and Software Development Lifecycle Projects;
+                    assessing employee behaviors; defining digital strategies to build the clients' brand. He has
+                    immensely helped the team to overcome challenges.
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/sudarshan.jpg' %}" alt="Image not found...!">
+                <div class="member-name">Sudarshan</div>
+                <div class="member-title">Project Lead</div>
+                <div class="member-detail">
+                    <p></p>
+                    <p></p>
+                </div>
+                <a href="https://www.linkedin.com/in/sudharshan-v-927422174/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/siddhartha.jpg' %}" alt="Image not found...!">
+                <div class="member-name">Siddhartha Dutta</div>
+                <div class="member-title">Project Lead</div>
+                <div class="member-detail">
+                    <p>B.Tech CSE (2021)</p>
+                    <p>Amity University, Mumbai</p>
+                </div>
+                <a href="https://www.linkedin.com/in/siddharthapratimdutta/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">Siddhartha is currently an undergraduate student pursuing a STEM career. He
+                    hopes to pursue a career in software development.
+                    Siddhartha was present during the inception of the iCMS project, and he facilitated the requirements
+                    engineering and design phases of the application. He also contributed to the initial project setup
+                    and managed the development team for the first month.
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/sohan.png' %}" alt="Image not found...!">
+                <div class="member-name">Sohan Patil</div>
+                <div class="member-title">Backend Developer</div>
+                <div class="member-detail">
+                    <p>B.Tech CSE (2021)</p>
+                    <p>MIT Academy Of Engineering, Pune</p>
+                </div>
+                <a href=" https://www.linkedin.com/in/patilsohan" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+                    Sohan is a Python and Linux enthusiastic who is actively searching for career opportunities.
+                    Sohan was a backend Python/Django developer during this project. The whole login functionality was
+                    developed by him including login with social accounts. In the contact module he contributed to
+                    develop contact scoring functionality and also he contributed to meeting module and contactform
+                    module.
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/harjeet.jpeg' %}" alt="Image not found...!">
+                <div class="member-name">Harjeet Singh</div>
+                <div class="member-title">Backend Developer</div>
+                <div class="member-detail">
+                    <p>B.Tech IT (2021)</p>
+                    <p>Guru Tegh Bahadur Institute of Technology, New Delhi</p>
+                </div>
+                <a href="https://linkedin.com/in/harjeet-singh-43a173143" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+                    Harjeet loves coding in C, C++, and Python. He is enthusiastic about working on projects related to
+                    Django, Machine Learning, and AI.
+                    Harjeet has worked as a backend web developer for iCMS. He has worked on designing the
+                    use cases and databases of various backend functionalities. He also contributed on developing the
+                    backend functionalities and database models of Login/SignUp, Groups, Contacts, Meetings.
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/prakhar.jpeg' %}" alt="Image not found...!">
+                <div class="member-name">Prakher Srivastava</div>
+                <div class="member-title">Backend Developer</div>
+                <div class="member-detail">
+                    <p>B.Tech CSE (2021)</p>
+                    <p>Pranveer Singh Institute of Technology, Kanpur</p>
+                </div>
+                <a href="https://www.linkedin.com/in/prakher-srivastava-3291461aa" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+                    Prakhar is interested in software designing. He worked as a backend developer for iCMS in which he
+                    worked on use cases, address book functionality and contacts management.
+                </div>
+            </div>
+            <div class="member col-12 col-lg-6 col-xl-4 disabled-text">
+                <img src="{% static 'webapp/img/team/miraaj.jpg' %}" alt="Image not found...!">
+                <div class="member-name">Miraaj Kadam</div>
+                <div class="member-title">Frontend Developer</div>
+                <div class="member-detail">
+                    <p>B.Tech CSE (2021)</p>
+                    <p>Amity University, Mumbai</p>
+                </div>
+                <a href="https://www.linkedin.com/in/miraajkadam/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <div class="member-desc">
+                    Miraaj likes implementing frontend structure for applications, He aims to provide best user
+                    experience during their time on the application.
+                    Miraaj joined iCMS team as a frontend developer. He designed and developed all
+                    the pages for the application during his tenure. Other than iCMS he was lightly involved in Tink's
+                    EDD web application for upgrading their interfaces to meet end user's need.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

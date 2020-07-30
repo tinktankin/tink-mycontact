@@ -15,3 +15,4 @@ from .addMeeting import AddMeeting
 from .meetings import Meetings
 from .meetingDetail import MeetingDetail
 from .documents import Documents
+from .team import Team
