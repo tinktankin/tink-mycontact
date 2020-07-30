@@ -32,23 +32,37 @@ Contact-Detail
                 <div class="row">
                     <div class="col-10">
                         <div class="info-display">
-                            <span class="info-type">Name: </span>
-                            <span class="info-value">{{Contact.first_name}}Dummy name</span>
+                            <span class="info-type">Full Name: </span>
+                            <span class="info-value">{{Contact.full_name}}</span>
                         </div>
                         <hr>
                         <div class="info-display">
-
-                            <span class="info-type">Last Name: </span>
-                            <span class="info-value">{{Contact.last_name}} Dummy Last Name</span>
+                            <span class="info-type">First Name: </span>
+                            <span class="info-value">{{Contact.first_name}}</span>
                         </div>
                         <hr>
+                        <div class="info-display">
+                            <span class="info-type">Middle Name: </span>
+                            <span class="info-value">{{Contact.middle_name}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Last Name: </span>
+                            <span class="info-value">{{Contact.last_name}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Email: </span>
+                            <span class="info-value">{{Contact.email}}</span>
+                        </div>
+                        <hr>
+
                         <div class="info-display">
                             <span class="info-type">Phone: </span>
                             <span class="info-value">{{Contact.phone}}</span>
                         </div>
                         <hr>
                         <div class="info-display">
-
                             <span class="info-type">Gender: </span>
                             <span class="info-value">{{Contact.gender}}</span>
                         </div>
@@ -56,6 +70,21 @@ Contact-Detail
                         <div class="info-display">
                             <span class="info-type">Location: </span>
                             <span class="info-value">{{Contact.location}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Zip Code: </span>
+                            <span class="info-value">{{Contact.zip_code}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">State: </span>
+                            <span class="info-value">{{Contact.state}}</span>
+                        </div>
+                        <hr>
+                        <div class="info-display">
+                            <span class="info-type">Country: </span>
+                            <span class="info-value">{{Contact.country}}</span>
                         </div>
                     </div>
                     <div class="col-2 score-container">
@@ -81,23 +110,12 @@ Contact-Detail
                         </div>
                         <hr>
                         <div>
-                            <span class="info-type">Designation: </span>
-                            <span class="info-value">{{Contact.designation}}</span>
-                        </div>
-                        <hr>
-                        <div>
-
-                            <span class="info-type">Department: </span>
-                            <span class="info-value">{{Contact.dept}}</span>
-                        </div>
-                        <hr>
-                        <div>
                             <span class="info-type">Incorporation Date: </span>
                             <span class="info-value">{{Contact.incorporation_date}}</span>
                         </div>
                         <hr>
                         <div>
-                            <span class="info-type">Business Years: </span>
+                            <span class="info-type">Years in Business: </span>
                             <span class="info-value">{{Contact.years_in_business}}</span>
                         </div>
                     </div>
@@ -118,8 +136,18 @@ Contact-Detail
                         </div>
                         <hr>
                         <div>
-                            <span class="info-type">Skills: </span>
+                            <span class="info-type">Key Skills: </span>
                             <span class="info-value">{{Contact.location}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Title: </span>
+                            <span class="info-value">{{Contact.title}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Industry: </span>
+                            <span class="info-value">{{Contact.industry}}</span>
                         </div>
                         <hr>
                         <div>
@@ -133,8 +161,18 @@ Contact-Detail
                         </div>
                         <hr>
                         <div>
-                            <span class="info-type">Experience: </span>
+                            <span class="info-type">Total Experience: </span>
                             <span class="info-value">{{Contact.total_exp}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Turnover: </span>
+                            <span class="info-value">{{Contact.turnover}}</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class="info-type">Employees: </span>
+                            <span class="info-value">{{Contact.employees}}</span>
                         </div>
                     </div>
                     <div class="col-2 score-container">
@@ -181,6 +219,11 @@ Contact-Detail
                 <div class="row">
                     <div class="col-10">
                         <div>
+                            <span class="info-type">Linkedin ID: </span>
+                            <span class="info-value">{{Contact.linkedin_url}}</span>
+                        </div>
+                        <hr>
+                        <div>
                             <span class="info-type">Facebook ID: </span>
                             <span class="info-value">{{Contact.facebook_url}}</span>
                         </div>
@@ -189,11 +232,6 @@ Contact-Detail
 
                             <span class="info-type">Skype ID: </span>
                             <span class="info-value">{{Contact.skype_id}}</span>
-                        </div>
-                        <hr>
-                        <div>
-                            <span class="info-type">Linkedin ID: </span>
-                            <span class="info-value">{{Contact.linkedin_url}}</span>
                         </div>
                     </div>
                     <div class="col-2 score-container">
