@@ -20,8 +20,7 @@ from webapp.views import (SignUp, Verify, LoginUser, LogoutUser, Dashboard,
                           ImportContacts, ForgotPassword, ResetPassword,
                           ImportFromFile, addcontact, viewcontact, AddContacts,
                           ViewContact, ContactForm, ContactDetail, AddMeeting,
-                          Meetings, MeetingDetail,Documents)
-
+                          Meetings, MeetingDetail, Documents, Team)
 from django.conf import settings
 from django.conf.urls.static import static
 from webapp.views import HomePage
@@ -46,6 +45,7 @@ urlpatterns = [
     path('addmeeting', AddMeeting.as_view(), name='addmeeting'),
     path('meetings', Meetings.as_view(), name='meetings'),
     path('meeting-detail', MeetingDetail.as_view(), name='meeting-detail'),
-    path('documents',Documents.as_view())
+    path('documents', Documents.as_view()),
+    path('team', Team.as_view(), name='team'),
     #url(r'^attendee_list/', AddMeeting.attendee_list)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

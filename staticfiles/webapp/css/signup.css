@@ -19,7 +19,7 @@ body {
 
 .signup-box {
     height: auto;
-    width: 50%;
+    width: 60%;
     margin: 5% auto;
     overflow: auto;
 }
@@ -151,7 +151,7 @@ body {
 
 @media (max-width:1428px) {
     .signup-box {
-        width: 50%;
+        width: 80%;
     }
 }
 

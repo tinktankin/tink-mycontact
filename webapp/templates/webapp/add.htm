@@ -9,107 +9,138 @@ Add Contacts
 <link rel="stylesheet" href="{% static 'webapp/css/add.css' %}">
 {% endblock style %}
 
+{% block script %}
+<script src="{% static 'webapp/js/add.js' %}"></script>
+{% endblock script %}
+
 {% block body %}
 
-<section id="form-container">
-    <div class="container">
+<section class="add-contacts">
+    <div class="form-container">
         <form method="POST">
             {% csrf_token %}
-            <br>
-            <label for="full_name">Full Name</label>
-            <input type="text" id="full_name" name="full_name">
+            <div class="grid">
+                <div class="item">
+                    <div class="content">
+                        <h1>Personal</h1>
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" name="full_name">
 
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name">
 
-            <label for="middle_name">Middle Name</label>
-            <input type="text" id="middle_name" name="middle_name">
+                        <label for="middle_name">Middle Name</label>
+                        <input type="text" id="middle_name" name="middle_name">
 
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name">
 
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email">
 
-            <label for="designation">Designation</label>
-            <input type="text" id="designation" name="designation">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone">
 
-            <label for="email">E-mail</label>
-            <input type="text" id="email" name="email">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" name="gender">
 
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location">
 
-            <label for="location">Location</label>
-            <input type="text" id="location" name="location">
+                        <label for="zip_code">Zip Code</label>
+                        <input type="text" id="zip_code" name="zip_code">
 
-            <label for="gender">Gender</label>
-            <input type="text" id="gender" name="gender">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state">
 
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                </div>
 
-            <label for="dept">Department</label>
-            <input type="text" id="dept" name="dept">
+                <div class="item">
+                    <div class="content">
+                        <h1>Corporate</h1>
+                        <label for="cin_no">cin no</label>
+                        <input type="text" id="cin_no" name="cin_no">
 
-            <label for="university">University</label>
-            <input type="text" id="university" name="university">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
 
-            <label for="degree">Degree</label>
-            <input type="text" id="degree" name="degree">
+                        <label for="incorporation_date">Incorporation Date</label>
+                        <input type="text" id="incorporation_date" name="incorporation_date">
 
-            <label for="passing_year">Passing Year</label>
-            <input type="text" id="passing_year" name="passing_year">
+                        <label for="years_in_business">Years in business</label>
+                        <input type="text" id="years_in_business" name="years_in_business">
+                    </div>
+                </div>
 
-            <label for="college">College</label>
-            <input type="text" id="college" name="college">
+                <div class="item">
+                    <div class="content">
+                        <h1>Work</h1>
+                        <label for="ctc">CTC</label>
+                        <input type="text" id="ctc" name="ctc">
 
-            <label for="linked_url">Linkedin URL</label>
-            <input type="text" id="linked_url" name="linked_url">
+                        <label for="key_skills">Key Skills</label>
+                        <input type="text" id="key_skills" name="key_skills">
 
-            <label for="facebook_url">Facebook URL</label>
-            <input type="text" id="facebook_url" name="facebook_url">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
 
-            <label for="skype_id">Skype ID</label>
-            <input type="text" id="skype_id" name="skype_id">
+                        <label for="industry">Industry</label>
+                        <input type="text" id="industry" name="industry">
 
-            <label for="industry">Industry</label>
-            <input type="text" id="industry" name="industry">
+                        <label for="dept">Department</label>
+                        <input type="text" id="dept" name="dept">
 
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" name="designation">
 
-            <label for="state">State</label>
-            <input type="text" id="state" name="state">
+                        <label for="total_exp">Total Experience</label>
+                        <input type="text" id="total_exp" name="total_exp">
 
-            <label for="zip_code">Zip Code</label>
-            <input type="text" id="zip_code" name="zip_code">
+                        <label for="turnover">Turnover</label>
+                        <input type="text" id="turnover" name="turnover">
 
-            <label for="key_skills">Key Skills</label>
-            <input type="text" id="key_skills" name="key_skills">
+                        <label for="employees">Employees</label>
+                        <input type="text" id="employees" name="employees">
+                    </div>
+                </div>
 
-            <label for="total_exp">Total Experience</label>
-            <input type="text" id="total_exp" name="total_exp">
+                <div class="item">
+                    <div class="content">
+                        <h1>Academic</h1>
+                        <label for="college">College</label>
+                        <input type="text" id="college" name="college">
 
-            <label for="years_in_business">Years in business</label>
-            <input type="text" id="years_in_business" name="years_in_business">
+                        <label for="degree">Degree</label>
+                        <input type="text" id="degree" name="degree">
 
-            <label for="cin_no">cin no</label>
-            <input type="text" id="cin_no" name="cin_no">
+                        <label for="university">University</label>
+                        <input type="text" id="university" name="university">
 
-            <label for="turnover">Turnover</label>
-            <input type="text" id="turnover" name="turnover">
+                        <label for="passing_year">Passing Year</label>
+                        <input type="text" id="passing_year" name="passing_year">
+                    </div>
+                </div>
 
-            <label for="incorporation_date">Incorporation Date</label>
-            <input type="text" id="incorporation_date" name="incorporation_date">
+                <div class="item">
+                    <div class="content">
+                        <h1>Social</h1>
+                        <label for="linked_url">Linkedin URL</label>
+                        <input type="text" id="linked_url" name="linked_url">
 
-            <label for="employees">Employees</label>
-            <input type="text" id="employees" name="employees">
+                        <label for="facebook_url">Facebook URL</label>
+                        <input type="text" id="facebook_url" name="facebook_url">
 
-            <label for="ctc">CTC</label>
-            <input type="text" id="ctc" name="ctc">
-
-            <input type="submit" value="submit">
+                        <label for="skype_id">Skype ID</label>
+                        <input type="text" id="skype_id" name="skype_id">
+                    </div>
+                </div>
+            </div>
+            <div class="bttn">
+                <input type="submit" value="Add">
+            </div>
         </form>
     </div>
 </section>
