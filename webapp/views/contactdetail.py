@@ -24,10 +24,11 @@ class ContactDetail(View):
             write=open(path+'/'+'.files/'+str(request.user)+'/'+str(file1),'wb')
         except: # if system is not UNIX/LINUX based i.e. for windows and saving selected file accordingly
             path=sb.getoutput("cd")
-            sb.getoutput('mkdir '+ path+'\\'+'.files')#creating a hidden directory to store files
-            sb.getoutput('mkdir '+ path+'\\'+'.files'+'\\'+str(request.user))
+            #path.replace(' ','/ ')
+            sb.getoutput('mkdir "'+ path+'"\\'+'.files')#creating a hidden directory to store files
+            sb.getoutput('mkdir "'+ path+'"\\'+'.files'+'\\'+str(request.user))
             write=open(path+'\\'+'.files'+'\\'+str(request.user)+"\\"+str(file1),'wb')
         # Code to copy selected file into .files folder
         for data in file1.readlines():
             write.write(data)
-        return render(request, 'webapp/contactDetail.html',{'cont_instance': cont_instance})
+        return render(request, 'webapp/contactDetail.html',{'cont_instance': cont_instance}
