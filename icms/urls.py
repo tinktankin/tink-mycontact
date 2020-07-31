@@ -47,5 +47,6 @@ urlpatterns = [
     path('meeting-detail', MeetingDetail.as_view(), name='meeting-detail'),
     path('documents', Documents.as_view()),
     path('team', Team.as_view(), name='team'),
+    url(r'^delete/(?P<Meeting_id>\d+)/$', Meetings.delete, name='delete_meeting'),
     #url(r'^attendee_list/', AddMeeting.attendee_list)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
