@@ -1,0 +1,140 @@
+:root {
+    font-size: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: #f8f8f8;
+    padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resetpass .form-container {
+    margin: 100px auto;
+    padding: 20px 30px;
+    width: 40%;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+}
+
+.resetpass .form-container h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.resetpass .form-container h2 {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.resetpass .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resetpass .form-container form label {
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    display: block;
+    align-self: flex-start;
+}
+
+.resetpass .form-container form input[type='text'],
+.resetpass .form-container form input[type='email'],
+.resetpass .form-container form input[type='password'] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.325);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+
+.resetpass .form-container form input[type='text']:-webkit-autofill,
+.resetpass .form-container form input[type='text']:focus:-webkit-autofill,
+.resetpass .form-container form input[type='text']:-internal-autofill-selected,
+.resetpass .form-container form input[type='email']:-webkit-autofill,
+.resetpass .form-container form input[type='email']:focus:-webkit-autofill,
+.resetpass .form-container form input[type='email']:-internal-autofill-selected,
+.resetpass .form-container form input[type='password']:-webkit-autofill,
+.resetpass .form-container form input[type='password']:focus:-webkit-autofill,
+.resetpass .form-container form input[type='password']:-internal-autofill-selected {
+    box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
+}
+
+.resetpass .form-container form input[type='text']:focus,
+.resetpass .form-container form input[type='text']:-webkit-autofill:focus,
+.resetpass .form-container form input[type='email']:focus,
+.resetpass .form-container form input[type='email']:-webkit-autofill:focus,
+.resetpass .form-container form input[type='password']:focus,
+.resetpass .form-container form input[type='password']:-webkit-autofill:focus {
+    box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
+}
+
+.resetpass .form-container form input[type='submit'] {
+    margin-bottom: 2px;
+    height: 2.4rem;
+    width: 20%;
+    display: block;
+    align-self: flex-end;
+    overflow: auto;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: 500;
+    overflow: auto;
+}
+
+.resetpass .form-container form input[type='submit']:hover {
+    background-color: #238f3c;
+    transform: scale(1.02);
+}
+
+.resetpass .form-container form input[type='submit']:focus {
+    border: 2px solid #238f3c;
+}
+
+@media screen and (max-width:1420px) {
+    .resetpass .form-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .resetpass .form-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .resetpass .form-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .resetpass .form-container {
+        width: 90%;
+    }
+}

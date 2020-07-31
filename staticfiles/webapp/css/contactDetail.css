@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: flex-start;
     background-color: #E8E8E8;
+    border-top-right-radius: 10px;
 }
 
 .contact-detail .full-container .tab-bar .bar-item {
@@ -43,8 +44,9 @@ body {
 }
 
 .contact-detail .full-container .tab-bar .bar-item:hover {
-    background-color: #d0d0d0;
+    background-color: #A9A9A9;
     transition: all .1s ease;
+    color: #fff;
 }
 
 .contact-detail .full-container .tab-bar .bar-item:focus {
@@ -67,6 +69,7 @@ body {
     width: 70%;
     margin-top: 5px;
     margin-bottom: 20px;
+    transition: all .1s ease;
 }
 
 .contact-detail .full-container .tab-detail .info-display {
@@ -85,7 +88,7 @@ body {
     background-color: #ffcc00;
     border-radius: 50%;
     height: 6rem;
-    width: 6rem;
+    min-width: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +110,8 @@ body {
     border-left: 1px solid #E8E8E8;
     border-right: 1px solid #E8E8E8;
     border-bottom: 1px solid #E8E8E8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .contact-detail .full-container .btn-container {
@@ -124,6 +129,7 @@ body {
     border: none;
     width: 140px;
     color: #fff;
+    transition: all .1s ease;
 }
 
 .contact-detail .full-container .btn-container button.btn:hover {
@@ -162,5 +168,31 @@ body {
     .contact-detail .full-container .btn-container button.btn {
         margin: 0 auto;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .contact-detail .full-container .tab-bar .bar-item {
+        width: 100%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .btn-container button.btn {
+        width: 90%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .tab-detail hr {
+        width: 100%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .tab-detail .score-container {
+        justify-content: center;
+        margin-bottom: 20px;
+        overflow: auto
     }
 }
