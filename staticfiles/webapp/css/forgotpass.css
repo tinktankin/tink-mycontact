@@ -52,14 +52,14 @@ body {
 .forgotpass .forgotpass-form-container form input[type='email']:-webkit-autofill,
 .forgotpass .forgotpass-form-container form input[type='email']:focus:-webkit-autofill,
 .forgotpass .forgotpass-form-container form input[type='email']:-internal-autofill-selected {
-    box-shadow: inset 0 0 0px 9999px #F5F5F5 !important;
-    -webkit-box-shadow: inset 0 0 0px 9999px #F5F5F5 !important;
+    box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0 !important;
 }
 
 .forgotpass .forgotpass-form-container form input[type='email']:focus,
 .forgotpass .forgotpass-form-container form input[type='email']:-webkit-autofill:focus {
-    box-shadow: inset 0 0 0px 9999px #F5F5F5, 0 0 8px #F5F5F5;
-    -webkit-box-shadow: inset 0 0 0px 9999px #F5F5F5, 0 0 8px #F5F5F5;
+    box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
+    -webkit-box-shadow: inset 0 0 0px 9999px #F0F0F0, 0 0 8px #F0F0F0;
 }
 
 .forgotpass .forgotpass-form-container form input[type='submit'] {

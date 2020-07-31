@@ -1,0 +1,198 @@
+:root {
+    font-size: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: #f8f8f8;
+    padding-bottom: 90px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-detail .full-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 0;
+}
+
+.contact-detail .full-container .tab-bar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #E8E8E8;
+    border-top-right-radius: 10px;
+}
+
+.contact-detail .full-container .tab-bar .bar-item {
+    height: 67px;
+    width: 270px;
+    padding: 3px 10px;
+    background-color: #d3d3d3;
+    border: none;
+    border-top-right-radius: 10px;
+    font-weight: 300;
+    margin-right: 20px;
+    transition: all .1s ease;
+    font-size: 3rem;
+}
+
+.contact-detail .full-container .tab-bar .bar-item:hover {
+    background-color: #A9A9A9;
+    transition: all .1s ease;
+    color: #fff;
+}
+
+.contact-detail .full-container .tab-bar .bar-item:focus {
+    outline: none;
+}
+
+.active-tab {
+    background-color: #808080 !important;
+    color: #fff;
+    font-weight: 500;
+    transition: all .1s ease;
+}
+
+.contact-detail .full-container .tab-detail {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+}
+
+.contact-detail .full-container .tab-detail hr {
+    width: 70%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    transition: all .1s ease;
+}
+
+.contact-detail .full-container .tab-detail .info-display {
+    margin: 4px 0;
+}
+
+.contact-detail .full-container .tab-detail span.info-type {
+    font-weight: 500;
+}
+
+.contact-detail .full-container .tab-detail .score-container {
+    display: flex;
+}
+
+.contact-detail .full-container .tab-detail .score-container .score-display {
+    background-color: #ffcc00;
+    border-radius: 50%;
+    height: 6rem;
+    min-width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in-out;
+}
+
+.contact-detail .full-container .tab-detail .score-container .score-display:hover {
+    transform: scale(1.05);
+    transition: all .1s ease-in-out;
+}
+
+.contact-detail .full-container .tab-detail .score-container .score-display span.score {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #800080;
+}
+
+.contact-detail .full-container .detail-container .tab-detail {
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contact-detail .full-container .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.contact-detail .full-container .btn-container button.btn {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 500;
+    background-color: #3463ae;
+    border: none;
+    width: 140px;
+    color: #fff;
+    transition: all .1s ease;
+}
+
+.contact-detail .full-container .btn-container button.btn:hover {
+    transform: scale(1.03);
+}
+
+.disabled-text {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width:1700px) {
+    .contact-detail .full-container .tab-bar {
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .contact-detail .full-container .tab-bar .bar-item {
+        width: 270px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:1069px) {
+    .contact-detail .full-container .btn-container {
+        flex-direction: column;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .contact-detail .full-container .btn-container button.btn {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .contact-detail .full-container .tab-bar .bar-item {
+        width: 100%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .btn-container button.btn {
+        width: 90%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .tab-detail hr {
+        width: 100%;
+        transition: all .1s ease;
+        overflow: auto
+    }
+
+    .contact-detail .full-container .tab-detail .score-container {
+        justify-content: center;
+        margin-bottom: 20px;
+        overflow: auto
+    }
+}

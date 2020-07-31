@@ -1,18 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password</title>
-</head>
-<body>
-    <p>Check your Email and enter the otp and enter new password</p>    
-    <form method="post">
-        {% csrf_token %}
-        OTP: <input type="text" name="otp" required/>
-        Email: <input type="email" name="email" required/>
-		NewPassword: <input type="password" name="password" required/>
-		<input type="submit" value="Submit">
-	</form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Reset Password
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static  'webapp/css/resetpass.css''%}">
+{% endblock style %}
+
+{% block body %}
+
+<section class="resetpass">
+    <div class="form-container">
+        <h1>Check your Email</h1>
+        <h2>Enter OTP and your new password</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="otp">OTP</label>
+            <input type="text" name="otp" required id="otp" />
+            <label for="email">Email</label>
+            <input type="email" name="email" required id="email" />
+            <label for="password">New Password</label>
+            <input type="password" name="password" required id="password" />
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+{% endblock body %}
