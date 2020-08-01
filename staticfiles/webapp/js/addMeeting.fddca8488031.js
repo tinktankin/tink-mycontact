@@ -25,13 +25,13 @@ $(document).ready(function () {
         // console.log(currentScript.replace(currentScriptFile, ''));
 
         // Code to save the file -->
-        var textToSave = attendeeList;
-        var hiddenElement = document.createElement('a');
+        //var textToSave = attendeeList;
+        //var hiddenElement = document.createElement('a');
 
-        hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
-        hiddenElement.target = '_blank';
-        hiddenElement.download = 'Attendees.txt';
-        hiddenElement.click();
+        //hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+        //hiddenElement.target = '_blank';
+        //hiddenElement.download = 'Attendees.txt';
+        //hiddenElement.click();
     })
 });
 
