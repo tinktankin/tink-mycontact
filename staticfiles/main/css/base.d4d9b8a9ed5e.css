@@ -1,0 +1,79 @@
+:root {
+    font-size: 12px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .navbar-brand #brand-first {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.navbar .navbar-brand #brand-second {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bg-light {
+    background: rgba(0, 0, 0, 0.3) !important;
+
+}
+
+a.nav-link {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+}
+
+a.nav-link:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+#footer {
+    display: block;
+    background: rgba(0, 0, 0, 0.5) !important;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+#footer .container {
+    max-width: 600px;
+}
+
+#footer hr {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#footer a {
+    color: rgba(255, 255, 255, .7);
+}
+
+#footer a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+#footer .footer-copyright a {
+    color: rgba(255, 255, 255, .6);
+}
